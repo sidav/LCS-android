@@ -26,9 +26,9 @@ import lcs.android.news.StoryType;
 import lcs.android.site.type.PoliceStation;
 import lcs.android.util.Color;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-public @NonNullByDefault class CarTheft extends ArrayList<Creature> implements DailyActivity {
+public class CarTheft extends ArrayList<Creature> implements DailyActivity {
   @Override public void daily() {
     final List<Creature> stealcars = this;
     for (final Creature p : stealcars) {

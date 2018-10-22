@@ -7,16 +7,16 @@ import lcs.android.politics.Issue;
 import lcs.android.site.map.SpecialBlocks;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-@Xml.Name(name = "INDUSTRY_POLLUTER") public @NonNullByDefault class Polluter extends
+@Xml.Name(name = "INDUSTRY_POLLUTER") public class Polluter extends
     AbstractSiteType {
   @Override public String ccsSiteName() {
     return "Greenpeace Offices.";
   }
 
-  @Override @Nullable public SpecialBlocks commonSpecial() {
+  @Override public SpecialBlocks commonSpecial() {
     return SpecialBlocks.POLLUTER_EQUIPMENT;
   }
 

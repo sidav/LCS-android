@@ -3,9 +3,9 @@ package lcs.android.news;
 import static lcs.android.game.Game.*;
 import lcs.android.basemode.iface.Location;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-@NonNullByDefault class SquadStoryText {
+class SquadStoryText {
   static void squadstory_text_opening(final NewsStory ns, final boolean liberalguardian,
       final boolean ccs, final StringBuilder story) {
     if (ns.type == StoryType.SQUAD_SITE) {

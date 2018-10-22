@@ -21,10 +21,10 @@ import lcs.android.site.Advance;
 import lcs.android.site.map.SuccessTest;
 import lcs.android.util.Color;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 /** code for making conservatives found in encounters into hostages */
-public @NonNullByDefault class Kidnap {
+public class Kidnap {
   private Kidnap() {}
 
   /** Display prompt on screen, asking to choose a liberal to perform the kidnapping (or cancel),

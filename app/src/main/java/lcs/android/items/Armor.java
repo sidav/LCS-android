@@ -12,11 +12,11 @@ import lcs.android.game.Game;
 import lcs.android.game.GameMode;
 import lcs.android.site.map.TileSpecial;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 /** Specific instances of the various armors found in-game */
-public @NonNullByDefault class Armor extends AbstractItem<ArmorType> {
+public class Armor extends AbstractItem<ArmorType> {
   /** Armor has a quality rating, which affects how well it defends from damage, and whether you can
    * get past bouncers in it. */
   public enum Rating {
@@ -266,7 +266,7 @@ public @NonNullByDefault class Armor extends AbstractItem<ArmorType> {
     return equipTitle();
   }
 
-  @Nullable private static Armor none = null;
+  private static Armor none = null;
 
   private static final long serialVersionUID = Game.VERSION;
 

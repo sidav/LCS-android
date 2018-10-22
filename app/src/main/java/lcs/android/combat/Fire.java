@@ -9,10 +9,10 @@ import lcs.android.site.map.MapChangeRecord;
 import lcs.android.site.map.TileSpecial;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 /** Weapon attacks may have a chance of causing a fire, or debris damage */
-@NonNullByDefault class Fire implements Xml.Configurable { // NO_UCD
+class Fire implements Xml.Configurable { // NO_UCD
   @SuppressWarnings("unused") private boolean causesDebris = false;
 
   private int chance = 0;

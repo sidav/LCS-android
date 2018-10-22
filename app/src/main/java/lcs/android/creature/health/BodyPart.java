@@ -5,11 +5,11 @@ import java.util.Set;
 
 import lcs.android.util.DefaultValueKey;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 /** Parts of the body.
  * @author addie */
-public @NonNullByDefault enum BodyPart implements DefaultValueKey<Set<Wound>> {
+public enum BodyPart implements DefaultValueKey<Set<Wound>> {
   ARM_LEFT("left arm", 20),
   ARM_RIGHT("right arm", 20),
   BODY("body", 100),

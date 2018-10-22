@@ -5,9 +5,9 @@ import lcs.android.creature.CreatureName;
 import lcs.android.game.Game;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-@Xml.Name(name = "OUTDOOR_PUBLICPARK") public @NonNullByDefault class PublicPark extends
+@Xml.Name(name = "OUTDOOR_PUBLICPARK") public class PublicPark extends
     AbstractSiteType {
   @Override public void generateName(final Location l) {
     l.setName(CreatureName.lastname() + " Park");

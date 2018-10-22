@@ -10,8 +10,8 @@ import java.io.StreamCorruptedException;
 
 import lcs.android.game.Game;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 import android.util.Log;
 
@@ -21,7 +21,7 @@ import android.util.Log;
  * <p>
  * Cuts serialization time by more than half on my S2 (sometimes by 80%), increases deserialization
  * by about 40%. */
-public @NonNullByDefault class LcsStream {
+public class LcsStream {
   /** overrides readUTF to read 16-bit null-terminated character strings. */
   public static class In extends ObjectInputStream {
     public In(final InputStream input) throws StreamCorruptedException, IOException {
@@ -65,11 +65,11 @@ public @NonNullByDefault class LcsStream {
 
     private final ByteArrayOutputStream mOutput;
 
-    @Nullable private Class<?> previousC;
+    private Class<?> previousC;
 
-    @Nullable private String previousName;
+    private String previousName;
 
-    @Override @Nullable protected Object replaceObject(final @Nullable Object object) {
+    @Override protected Object replaceObject(final Object object) {
       final long now = System.currentTimeMillis();
       final long size = mOutput.size() - lastSize;
       lastSize = mOutput.size();

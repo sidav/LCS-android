@@ -8,11 +8,11 @@ import lcs.android.politics.Alignment;
 import lcs.android.politics.Exec;
 import lcs.android.politics.Issue;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 import android.util.Log;
 
-@NonNullByDefault class MajorEvent {
+class MajorEvent {
   enum Picture {
     BOOK,
     CEO,
@@ -632,7 +632,7 @@ import android.util.Log;
             "breed demonic thoughts that manifest themselves as dreams of murder.  ",
             "contain step-by-step instructions to summon the Prince of Darkness.  "));
         story.append("In their complaint, the groups cited an incident involving ");
-        story.append(i.rng.choice("a child that swore in @NonNullByDefault class",
+        story.append(i.rng.choice("a child that swore in class",
             "a child that said a magic spell at her parents",
             "a child that " + i.rng.choice("pushed ", "hit ", "slapped ", "insulted ", "tripped ")
                 + i.rng.choice("his ", "her ") + i.rng.choice("older ", "younger ", "twin ")

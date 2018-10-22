@@ -9,10 +9,10 @@ import lcs.android.politics.Exec;
 import lcs.android.politics.Issue;
 import lcs.android.util.Color;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-public @NonNullByDefault class LiberalAgenda {
+public class LiberalAgenda {
   private LiberalAgenda() {}
 
   private static final int[] abortion = { R.string.AbortionX, R.string.AbortionA,
@@ -107,7 +107,7 @@ public @NonNullByDefault class LiberalAgenda {
     }
   }
 
-  @Nullable private static int[] arrayFromLaw(final Issue l) {
+  private static int[] arrayFromLaw(final Issue l) {
     int[] which = null;
     switch (l) {
     case ABORTION:

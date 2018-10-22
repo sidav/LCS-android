@@ -9,9 +9,9 @@ import lcs.android.politics.Issue;
 import lcs.android.shop.Shop;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-@Xml.Name(name = "BUSINESS_PAWNSHOP") public @NonNullByDefault class PawnShop extends
+@Xml.Name(name = "BUSINESS_PAWNSHOP") public class PawnShop extends
     AbstractSiteType implements IShop {
   @Override public void generateName(final Location l) {
     if (i.issue(Issue.GUNCONTROL).law() == Alignment.ELITELIBERAL) {

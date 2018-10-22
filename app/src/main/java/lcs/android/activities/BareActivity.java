@@ -3,11 +3,11 @@ package lcs.android.activities;
 import lcs.android.activities.iface.Activity;
 import lcs.android.game.Game;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 /** Activity with no further details of who / where required. Immutable.
  * @author addie */
-public @NonNullByDefault class BareActivity extends AbstractActivity {
+public class BareActivity extends AbstractActivity {
   public BareActivity(final Activity type) {
     super(type);
   }

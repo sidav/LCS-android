@@ -9,13 +9,13 @@ import lcs.android.R;
 import lcs.android.creature.health.Animal;
 import lcs.android.game.Game;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 import android.util.Log;
 
 /** Stores the names of creatures: they're chosen from a list, and can be serialised by number alone.
  * @author addie */
-public @NonNullByDefault class CreatureName implements Serializable {
+public class CreatureName implements Serializable {
   /** Returns a human name of random gender. */
   public CreatureName() {
     this(i.rng.choice(Gender.MALE, Gender.FEMALE), Animal.HUMAN);

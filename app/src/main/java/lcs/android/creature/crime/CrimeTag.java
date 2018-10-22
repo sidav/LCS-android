@@ -4,10 +4,10 @@ import lcs.android.law.Crime;
 import lcs.android.util.Curses;
 import lcs.android.util.HashCodeBuilder;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-public @NonNullByDefault class CrimeTag implements Comparable<CrimeTag> {
+public class CrimeTag implements Comparable<CrimeTag> {
   public CrimeTag(final Crime l, final int c) {
     law = l;
     count = c;
@@ -21,7 +21,7 @@ public @NonNullByDefault class CrimeTag implements Comparable<CrimeTag> {
     Curses.ui(gcrimes).text(toString()).narrow().add();
   }
 
-  @Override public int compareTo(@Nullable final CrimeTag another) {
+  @Override public int compareTo(final CrimeTag another) {
     assert another != null;
     if (another.count != count) {
       return another.count - count;
@@ -29,7 +29,7 @@ public @NonNullByDefault class CrimeTag implements Comparable<CrimeTag> {
     return law.toString().compareTo(another.law.toString());
   }
 
-  @Override public boolean equals(final @Nullable Object o) {
+  @Override public boolean equals(final Object o) {
     if (o == this) {
       return true;
     }

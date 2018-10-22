@@ -15,11 +15,11 @@ import lcs.android.game.SkillRoll;
 import lcs.android.politics.Alignment;
 import lcs.android.util.SparseMap;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 import android.util.Log;
 
-public @NonNullByDefault class CreatureSkill implements Serializable { // NO_UCD
+public class CreatureSkill implements Serializable { // NO_UCD
   public CreatureSkill(final Creature creature) {
     c = creature;
   }

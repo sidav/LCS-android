@@ -24,11 +24,11 @@ import lcs.android.site.type.CableNews;
 import lcs.android.util.Color;
 import lcs.android.util.Curses;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 import android.util.Pair;
 
-public @NonNullByDefault enum SpecialBlocks {
+public enum SpecialBlocks {
   APARTMENT_LANDLORD {
     @Override public void special() {
       // no action

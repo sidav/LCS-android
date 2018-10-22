@@ -18,12 +18,12 @@ import lcs.android.items.Vehicle;
 import lcs.android.site.type.AbstractSiteType;
 import lcs.android.util.Filter;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 /** Common methods for a CarChase / FootChase / SiteEncounter
  * @author addie */
-public abstract @NonNullByDefault class Encounter implements Serializable {
+public abstract class Encounter implements Serializable {
   /** Any stuff on the ground */
   private final List<AbstractItem<? extends AbstractItemType>> groundLoot = new ArrayList<AbstractItem<? extends AbstractItemType>>();
 
@@ -90,7 +90,7 @@ public abstract @NonNullByDefault class Encounter implements Serializable {
 
   private static final long serialVersionUID = Game.VERSION;
 
-  public static Encounter createEncounter(@Nullable final AbstractSiteType sitetype,
+  public static Encounter createEncounter(final AbstractSiteType sitetype,
       final int siteCrime) {
     if (siteCrime == 0) {
       return new EmptyEncounter();

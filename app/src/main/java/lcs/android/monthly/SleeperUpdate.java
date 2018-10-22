@@ -29,7 +29,7 @@ import lcs.android.site.type.AbstractSiteType;
 import lcs.android.site.type.PoliceStation;
 import lcs.android.site.type.Shelter;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 /** *JDS* ----- The sleeper system has been completely reworked. - Sleepers no longer directly
  * influence the issues. They now affect the broad "liberal power" stats across many issues, which
@@ -43,7 +43,7 @@ import org.eclipse.jdt.annotation.NonNullByDefault;
  * shelter is not under siege, and "canseethings" is enabled (eg, you're not in prison or disbanded
  * or some other situation where your sleeper can't get in touch with anyone in your squad). - News
  * Anchors and Radio Personalities remain the two most powerful sleepers. */
-@NonNullByDefault class SleeperUpdate {
+class SleeperUpdate {
   /** Add sleeper effect from a given creature to the libpower Map.
    * @param cr
    * @param libpower */

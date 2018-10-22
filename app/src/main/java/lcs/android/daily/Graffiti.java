@@ -25,9 +25,9 @@ import lcs.android.news.NewsStory;
 import lcs.android.news.StoryType;
 import lcs.android.politics.Issue;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-@NonNullByDefault class Graffiti extends ArrayList<Creature> implements DailyActivity {
+class Graffiti extends ArrayList<Creature> implements DailyActivity {
   @Override public void daily() {
     final List<Creature> graffiti = this;
     for (final Creature s : graffiti) {

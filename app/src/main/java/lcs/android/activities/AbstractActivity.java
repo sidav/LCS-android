@@ -5,12 +5,12 @@ import java.io.Serializable;
 import lcs.android.activities.iface.Activity;
 import lcs.android.game.Game;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-/** Superclass of all kinds of LCS activity. This @NonNullByDefault class is immutable (although
+/** Superclass of all kinds of LCS activity. This class is immutable (although
  * subclasses might not be).
  * @author addie */
-public abstract @NonNullByDefault class AbstractActivity implements Serializable {
+public abstract class AbstractActivity implements Serializable {
   protected AbstractActivity(final Activity type) {
     this.type = type;
   }

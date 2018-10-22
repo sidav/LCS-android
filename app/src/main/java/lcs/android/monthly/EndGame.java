@@ -20,7 +20,7 @@ import lcs.android.scoring.HighScore;
 import lcs.android.util.Curses;
 import lcs.android.util.RomanNumeral;
 
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.Nullable;
 
 import android.util.Log;
 
@@ -270,7 +270,7 @@ public enum EndGame { // TODO order shouldn't matter.
   }
 
   /** endgame - checks if a constitutional amendment is ratified */
-  static boolean ratify(final int level, final Issue lawview, @Nullable final Issue view,
+  static boolean ratify(final int level, final Issue lawview, final Issue view,
       final int j) {
     // TODO test / androidify
     ui().text("The Ratification Process:").add();

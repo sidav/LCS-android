@@ -12,11 +12,11 @@ import lcs.android.game.Game;
 import lcs.android.game.Ledger;
 import lcs.android.politics.Politics;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 /** Sketch portraits for money.
  * @author addie */
-public @NonNullByDefault class Art extends ArrayList<Creature> implements DailyActivity {
+public class Art extends ArrayList<Creature> implements DailyActivity {
   @Override public void daily() {
     for (final Creature s : this) {
       if (!Activities.checkForArrest(s, "sketching portraits")) {

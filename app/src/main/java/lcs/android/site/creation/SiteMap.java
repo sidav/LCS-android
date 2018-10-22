@@ -21,11 +21,11 @@ import lcs.android.util.LcsRuntimeException;
 import lcs.android.util.Xml;
 import lcs.android.util.Xml.Configurable;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 import android.util.Log;
 
-public @NonNullByDefault class SiteMap {
+public class SiteMap {
   private static enum Side {
     BOTTOM,
     LEFT,

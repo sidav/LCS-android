@@ -31,9 +31,9 @@ import lcs.android.util.Color;
 import lcs.android.util.Curses;
 import lcs.android.util.SparseMap;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-public @NonNullByDefault class Health implements Serializable {
+public class Health implements Serializable {
   public Health(final Creature creature) {
     c = creature;
   }

@@ -1,13 +1,13 @@
 package lcs.android.util;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 import android.util.Log;
 
 /** <q>keypresses</q> have to be shared between the UI and the Game threads on Android, so this @NonNullByDefault
  * class contains synchronized methods to enable that. There's only a singleton instance of this @NonNullByDefault
  * class. */
-@NonNullByDefault class GetCh {
+class GetCh {
   private GetCh() {}
 
   private int keyPressed;

@@ -8,9 +8,9 @@ import lcs.android.site.map.TileSpecial;
 import lcs.android.util.Xml;
 import lcs.android.util.Xml.Configurable;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-@NonNullByDefault class ConfigSiteTile extends AbstractConfigSiteCommand {
+class ConfigSiteTile extends AbstractConfigSiteCommand {
   private enum SiteMapLogic {
     ADD,
     NONE,

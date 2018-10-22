@@ -7,9 +7,9 @@ import lcs.android.game.Game;
 import lcs.android.site.type.AbstractSiteType.UniqueNamedSite;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-@Xml.Name(name = "RESIDENTIAL_TENEMENT") public @NonNullByDefault class Tenement extends
+@Xml.Name(name = "RESIDENTIAL_TENEMENT") public class Tenement extends
     UniqueNamedSite {
   @Override public boolean canBuyGuns() {
     return true;

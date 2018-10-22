@@ -24,10 +24,10 @@ import lcs.android.util.Color;
 import lcs.android.util.Curses;
 import lcs.android.util.Filter;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-public @NonNullByDefault class Advance {
+public class Advance {
   /** handles end of round stuff for living creatures */
   public static void creatureAdvance() {
     for (final Creature p : Filter.of(i.activeSquad(), Filter.LIVING)) {
@@ -175,7 +175,7 @@ public @NonNullByDefault class Advance {
     p.prisoner(null);
   }
 
-  @Nullable private static Creature getTopMedical(final Creature cr) {
+  private static Creature getTopMedical(final Creature cr) {
     int topmedicalskill = -1;
     Creature topmedical = null;
     for (final Creature p : i.activeSquad()) {

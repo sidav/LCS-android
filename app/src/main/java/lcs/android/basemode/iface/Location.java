@@ -33,15 +33,15 @@ import lcs.android.util.Test;
 import lcs.android.util.Xml;
 import lcs.android.util.Xml.Configurable;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 import android.util.Log;
 
-public @NonNullByDefault class Location implements Serializable {
+public class Location implements Serializable {
   /** @author addie */
   public static class Builder implements Configurable, IBuilder<Location> {
-    @Nullable private String parent;
+    private String parent;
 
     private int rent;
 
@@ -55,7 +55,7 @@ public @NonNullByDefault class Location implements Serializable {
 
     private boolean needCar;
 
-    @Nullable private AbstractSiteType type;
+    private AbstractSiteType type;
 
     private String shortname = "";
 
@@ -150,7 +150,7 @@ public @NonNullByDefault class Location implements Serializable {
 
   private boolean needCar;
 
-  @Nullable private final Location parent;
+  private final Location parent;
 
   private int rent;
 
@@ -158,7 +158,7 @@ public @NonNullByDefault class Location implements Serializable {
 
   private final AbstractSiteType type;
 
-  @Nullable private List<MapChangeRecord> changes;
+  private List<MapChangeRecord> changes;
 
   private boolean hidden;
 
@@ -235,7 +235,7 @@ public @NonNullByDefault class Location implements Serializable {
     return days;
   }
 
-  @Nullable public BusinessFronts frontBusiness() {
+  public BusinessFronts frontBusiness() {
     return lcs.frontBusiness;
   }
 
@@ -381,7 +381,7 @@ public @NonNullByDefault class Location implements Serializable {
     return eaters;
   }
 
-  @Nullable public Location parent() {
+  public Location parent() {
     return parent;
   }
 
@@ -672,7 +672,7 @@ public @NonNullByDefault class Location implements Serializable {
     return LazyInit.nowhere;
   }
 
-  @Nullable private static Location findParent(@Nullable String parent) {
+  private static Location findParent(String parent) {
     if (parent == null) {
       return null;
     }

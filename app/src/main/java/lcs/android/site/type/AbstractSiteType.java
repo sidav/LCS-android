@@ -30,12 +30,12 @@ import lcs.android.util.NoDupeNoEmptyMap;
 import lcs.android.util.Xml;
 import lcs.android.util.Xml.Configurable;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 import android.util.Log;
 
-public abstract @NonNullByDefault class AbstractSiteType implements Configurable, Serializable {
+public abstract class AbstractSiteType implements Configurable, Serializable {
   public enum Specials {
     ARCHCONSERVATIVES {
       @Override void apply(final AbstractSiteType st, final boolean sec) {
@@ -210,7 +210,7 @@ public abstract @NonNullByDefault class AbstractSiteType implements Configurable
 
   private int encmax = 6;
 
-  @Nullable private Issue topNews;
+  private Issue topNews;
 
   private final Map<CreatureType, Integer> alarmarray = new HashMap<CreatureType, Integer>();
 
@@ -301,7 +301,7 @@ public abstract @NonNullByDefault class AbstractSiteType implements Configurable
   /** Gets any special blocks commonly associated with this location. (1/10 chance of appearing in
    * any square)
    * @return */
-  @Nullable public SpecialBlocks commonSpecial() {
+  public SpecialBlocks commonSpecial() {
     return null;
   }
 
@@ -311,7 +311,7 @@ public abstract @NonNullByDefault class AbstractSiteType implements Configurable
 
   /** Gets any special first blocks associated with this location. (only in one location)
    * @return */
-  @Nullable public SpecialBlocks firstSpecial() {
+  public SpecialBlocks firstSpecial() {
     return null;
   }
 
@@ -466,7 +466,7 @@ public abstract @NonNullByDefault class AbstractSiteType implements Configurable
 
   /** Gets any special second blocks associated with this location. (only in one location)
    * @return */
-  @Nullable public SpecialBlocks secondSpecial() {
+  public SpecialBlocks secondSpecial() {
     return null;
   }
 
@@ -495,7 +495,7 @@ public abstract @NonNullByDefault class AbstractSiteType implements Configurable
     return "SWAT";
   }
 
-  public @Nullable Issue topNews() {
+  public Issue topNews() {
     return topNews;
   }
 
@@ -592,8 +592,8 @@ public abstract @NonNullByDefault class AbstractSiteType implements Configurable
     }
   }
 
-  /** Return the SiteType concrete instance given a @NonNullByDefault class
-   * @param aClass the @NonNullByDefault class of a site
+  /** Return the SiteType concrete instance given a class
+   * @param aClass the class of a site
    * @return an existing SiteType instance
    * @throws NullPointerException if the class does not have a concrete instance */
   public static AbstractSiteType type(final Class<? extends AbstractSiteType> aClass) {

@@ -13,10 +13,10 @@ import lcs.android.items.ClipType;
 import lcs.android.items.Weapon;
 import lcs.android.util.Setter;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-public @NonNullByDefault class CreatureWeapon implements Serializable {
+public class CreatureWeapon implements Serializable {
   CreatureWeapon(final Creature creature) {
     this.creature = creature;
     weapon = Weapon.none();
@@ -65,7 +65,7 @@ public @NonNullByDefault class CreatureWeapon implements Serializable {
     return sum;
   }
 
-  public void dropWeapon(@Nullable final List<AbstractItem<? extends AbstractItemType>> lootpile) {
+  public void dropWeapon(final List<AbstractItem<? extends AbstractItemType>> lootpile) {
     if (extraThrowingWeapons.size() == 0) {
       hasThrownWeapon = true;
     }
@@ -76,7 +76,7 @@ public @NonNullByDefault class CreatureWeapon implements Serializable {
   }
 
   public void dropWeaponsAndClips(
-      @Nullable final List<AbstractItem<? extends AbstractItemType>> lootpile) {
+      final List<AbstractItem<? extends AbstractItemType>> lootpile) {
     hasThrownWeapon = false;
     dropWeapon(lootpile);
     if (lootpile != null) {
@@ -96,7 +96,7 @@ public @NonNullByDefault class CreatureWeapon implements Serializable {
   }
 
   public CreatureWeapon giveWeapon(final Weapon w,
-      @Nullable final List<AbstractItem<? extends AbstractItemType>> lootpile) {
+      final List<AbstractItem<? extends AbstractItemType>> lootpile) {
     if (w.size() != 0) {
       if (weapon.isThrowable() && weapon.is_same_type(w)) {
         final int take_number = 10 - countWeapons();
@@ -182,7 +182,7 @@ public @NonNullByDefault class CreatureWeapon implements Serializable {
     return false;
   }
 
-  @Nullable @Override public String toString() {
+  @Override public String toString() {
     return creature + ":" + weapon;
   }
 

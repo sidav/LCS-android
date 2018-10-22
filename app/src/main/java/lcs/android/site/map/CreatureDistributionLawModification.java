@@ -16,13 +16,13 @@ import lcs.android.site.type.AbstractSiteType;
 import lcs.android.util.Xml;
 import lcs.android.util.Xml.Configurable;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 /** Allow creatures which may be found at sites under certain legal conditions, eg. mutants appearing
  * when pollution is high.
  * @author addie */
-public @NonNullByDefault class CreatureDistributionLawModification implements Configurable {
+public class CreatureDistributionLawModification implements Configurable {
   /** Attach a CDLM to a given site type
    * @param parent the site type. */
   public CreatureDistributionLawModification(final AbstractSiteType parent) {
@@ -31,7 +31,7 @@ public @NonNullByDefault class CreatureDistributionLawModification implements Co
 
   private final Map<CreatureType, Integer> legalarray = new HashMap<CreatureType, Integer>();
 
-  @Nullable private AbstractSiteType parent;
+  private AbstractSiteType parent;
 
   private final List<String> reqs = new ArrayList<String>();
 

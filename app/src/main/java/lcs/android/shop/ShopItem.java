@@ -16,12 +16,12 @@ import lcs.android.util.LcsRuntimeException;
 import lcs.android.util.Xml;
 import lcs.android.util.Xml.Configurable;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 import android.util.Log;
 
-@NonNullByDefault class ShopItem extends AbstractShopOption {
+class ShopItem extends AbstractShopOption {
   private enum ItemClassEnum // Could be solved better without enum. -XML
   {
     ARMOR,
@@ -30,7 +30,7 @@ import android.util.Log;
     WEAPON
   }
 
-  @Nullable private ItemClassEnum itemclass = null;
+  private ItemClassEnum itemclass = null;
 
   private String itemtypename;
 
@@ -43,7 +43,7 @@ import android.util.Log;
   @Override public void xmlFinishChild() {}
 
   @Override public void xmlSet(final String key, final String value) {
-    if ("@NonNullByDefault class".equals(key)) {
+    if ("class".equals(key)) {
       if (Xml.getText(value).equals("WEAPON")) {
         itemclass = ItemClassEnum.WEAPON;
       } else if (Xml.getText(value).equals("CLIP")) {
@@ -53,7 +53,7 @@ import android.util.Log;
       } else if (Xml.getText(value).equals("LOOT")) {
         itemclass = ItemClassEnum.LOOT;
       } else {
-        throw new LcsRuntimeException("Unknown item @NonNullByDefault class" + Xml.getText(value));
+        throw new LcsRuntimeException("Unknown item class" + Xml.getText(value));
       }
     } else if ("type".equals(key)) {
       itemtypename = Xml.getText(value);

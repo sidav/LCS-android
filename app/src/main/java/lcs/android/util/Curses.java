@@ -7,7 +7,7 @@ import java.util.List;
 import lcs.android.R;
 import lcs.android.game.Game;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 import android.content.res.Resources.NotFoundException;
 import android.os.Message;
@@ -22,7 +22,7 @@ import android.util.Log;
  * <li>using a {@link #setText} method to change a specific text or button.
  * <li>using a {@link #ui} method to add a text or button into a ListView in the layout
  * </ul> */
-public @NonNullByDefault class Curses {
+public class Curses {
   private Curses() {}
 
   /** Ascii code for enter key. */

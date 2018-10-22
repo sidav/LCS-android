@@ -49,9 +49,9 @@ import lcs.android.site.type.Prison;
 import lcs.android.util.Color;
 import lcs.android.util.Filter;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-public @NonNullByDefault class Monthly {
+public class Monthly {
   public static void passMonth() {
     final Map<Issue, Alignment> oldlaw = new HashMap<Issue, Alignment>();
     for (final Issue l : Issue.values()) {

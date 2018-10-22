@@ -5,9 +5,9 @@ import java.util.Arrays;
 
 import lcs.android.game.Game;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-public @NonNullByDefault class Distribution implements Serializable {
+public class Distribution implements Serializable {
   private final int[] distribution = new int[5];
 
   public int[] headcount() {

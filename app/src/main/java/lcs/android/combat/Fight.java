@@ -31,12 +31,12 @@ import lcs.android.politics.Issue;
 import lcs.android.site.map.TileSpecial;
 import lcs.android.util.Color;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 import android.util.Pair;
 
-public final @NonNullByDefault class Fight {
+public final class Fight {
   public enum Fighting {
     STEALTH {
       @Override List<Creature> fighters() {
@@ -72,7 +72,7 @@ public final @NonNullByDefault class Fight {
       BodyPart.BODY, BodyPart.HEAD };
 
   private static final Comparator<Creature> FASTEST = new Comparator<Creature>() {
-    @Override public int compare(final @Nullable Creature lhs, final @Nullable Creature rhs) {
+    @Override public int compare(final Creature lhs, final Creature rhs) {
       assert lhs != null;
       assert rhs != null;
       return rhs.skill().getAttribute(Attribute.AGILITY, true)
@@ -488,7 +488,7 @@ public final @NonNullByDefault class Fight {
 
   private static void describeDamage(final Creature a, final Creature t, final StringBuilder str,
       final Attack attack_used, final BodyPart w, final Set<Wound> damtype, final int damamount,
-      @Nullable final Wound severtype, final boolean damagearmor) {
+      final Wound severtype, final boolean damagearmor) {
     final Creature target = protectTheFounder(t, w, damamount);
     target.health().wounds().get(w).addAll(damtype);
     if (severtype != null && damamount >= w.severAmount()) {
@@ -1317,7 +1317,7 @@ public final @NonNullByDefault class Fight {
     return target;
   }
 
-  @Nullable private static BodyPart randomBodyPart(final Creature target, final int aroll,
+  private static BodyPart randomBodyPart(final Creature target, final int aroll,
       final int droll) {
     BodyPart bp = null;
     boolean canhit = false;

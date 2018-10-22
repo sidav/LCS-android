@@ -4,9 +4,9 @@ import lcs.android.basemode.iface.Location;
 import lcs.android.game.Game;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-@Xml.Name(name = "RESIDENTIAL_SHELTER") public @NonNullByDefault class Shelter extends
+@Xml.Name(name = "RESIDENTIAL_SHELTER") public class Shelter extends
     AbstractSiteType {
   @Override public boolean canMap() {
     return false;

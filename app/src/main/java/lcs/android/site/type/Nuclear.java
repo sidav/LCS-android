@@ -8,16 +8,16 @@ import lcs.android.politics.Issue;
 import lcs.android.site.map.SpecialBlocks;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-@Xml.Name(name = "INDUSTRY_NUCLEAR") public @NonNullByDefault class Nuclear extends
+@Xml.Name(name = "INDUSTRY_NUCLEAR") public class Nuclear extends
     AbstractSiteType {
   @Override public String ccsSiteName() {
     return "Whirled Peas Museum.";
   }
 
-  @Override @Nullable public SpecialBlocks firstSpecial() {
+  @Override public SpecialBlocks firstSpecial() {
     return SpecialBlocks.NUCLEAR_ONOFF;
   }
 

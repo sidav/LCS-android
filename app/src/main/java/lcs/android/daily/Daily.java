@@ -48,11 +48,11 @@ import lcs.android.site.type.University;
 import lcs.android.site.type.Warehouse;
 import lcs.android.util.Filter;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 import android.util.Log;
 
-public @NonNullByDefault class Daily {
+public class Daily {
   private enum Dispersal {
     ABANDONLCS,
     BOSSINHIDING,

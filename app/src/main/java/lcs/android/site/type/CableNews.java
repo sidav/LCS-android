@@ -14,10 +14,10 @@ import lcs.android.site.Alienation;
 import lcs.android.site.map.SpecialBlocks;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-@Xml.Name(name = "MEDIA_CABLENEWS") public @NonNullByDefault class CableNews extends
+@Xml.Name(name = "MEDIA_CABLENEWS") public class CableNews extends
     AbstractSiteType {
   @Override public String alarmResponseString() {
     return ": ANGRY MOB RESPONDING";
@@ -43,7 +43,7 @@ import org.eclipse.jdt.annotation.Nullable;
     return "Network News Station.";
   }
 
-  @Override @Nullable public SpecialBlocks firstSpecial() {
+  @Override public SpecialBlocks firstSpecial() {
     return SpecialBlocks.NEWS_BROADCASTSTUDIO;
   }
 

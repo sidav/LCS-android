@@ -7,9 +7,9 @@ import lcs.android.game.Game;
 import lcs.android.site.type.AbstractSiteType.UniqueNamedSite;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-@Xml.Name(name = "INDUSTRY_WAREHOUSE") public @NonNullByDefault class Warehouse extends
+@Xml.Name(name = "INDUSTRY_WAREHOUSE") public class Warehouse extends
     UniqueNamedSite implements IInvestable {
   @Override public boolean hasLoot() {
     return false;

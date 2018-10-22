@@ -4,9 +4,9 @@ import lcs.android.game.Game;
 import lcs.android.site.type.AbstractSiteType.UnnamedSite;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-@Xml.Name(name = "INDUSTRIAL") public @NonNullByDefault class Industrial extends UnnamedSite {
+@Xml.Name(name = "INDUSTRIAL") public class Industrial extends UnnamedSite {
   /**
    *
    */

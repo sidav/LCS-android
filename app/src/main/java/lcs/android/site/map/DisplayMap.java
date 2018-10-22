@@ -10,11 +10,11 @@ import lcs.android.site.SiegeUnitType;
 import lcs.android.site.creation.SiteMap;
 import lcs.android.util.Color;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 /** Code for displaying the site.
  * @author addie */
-public @NonNullByDefault class DisplayMap {
+public class DisplayMap {
   private static class Wall {
     private static final int DOWN = 1;
 

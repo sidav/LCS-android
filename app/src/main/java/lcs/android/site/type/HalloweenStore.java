@@ -19,10 +19,10 @@ import lcs.android.items.WeaponType;
 import lcs.android.shop.Shop;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-@Xml.Name(name = "BUSINESS_HALLOWEEN") public @NonNullByDefault class HalloweenStore extends
+@Xml.Name(name = "BUSINESS_HALLOWEEN") public class HalloweenStore extends
     AbstractSiteType implements IShop {
   @Override public void generateName(final Location l) {
     l.setName("The Oubliette");
@@ -202,7 +202,7 @@ import org.eclipse.jdt.annotation.Nullable;
 
   private static final long serialVersionUID = Game.VERSION;
 
-  @Nullable public static ArmorType maskselect(final Creature cr) {
+  public static ArmorType maskselect(final Creature cr) {
     final List<ArmorType> masks = new ArrayList<ArmorType>();
     for (final ArmorType j : Game.type.armor.values()) {
       if (j.mask) {

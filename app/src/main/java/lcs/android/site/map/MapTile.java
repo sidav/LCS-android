@@ -11,17 +11,17 @@ import lcs.android.items.AbstractItem;
 import lcs.android.items.AbstractItemType;
 import lcs.android.site.SiegeUnitType;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-public @NonNullByDefault class MapTile {
+public class MapTile {
   public Set<TileSpecial> flag = EnumSet.of(TileSpecial.BLOCK);
 
   public Encounter encounter = new EmptyEncounter();
 
   public final Set<SiegeUnitType> siegeFlag = EnumSet.noneOf(SiegeUnitType.class);
 
-  @Nullable public SpecialBlocks special = null;
+  public SpecialBlocks special = null;
 
   private final List<AbstractItem<? extends AbstractItemType>> groundLoot = new ArrayList<AbstractItem<? extends AbstractItemType>>();
 

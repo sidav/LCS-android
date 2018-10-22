@@ -8,10 +8,10 @@ import lcs.android.politics.Issue;
 import lcs.android.site.map.SpecialBlocks;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-@Xml.Name(name = "GOVERNMENT_INTELLIGENCEHQ") public @NonNullByDefault class IntelligenceHq extends
+@Xml.Name(name = "GOVERNMENT_INTELLIGENCEHQ") public class IntelligenceHq extends
     AbstractSiteType {
   @Override public String alarmResponseString() {
     return ": AGENTS RESPONDING";
@@ -37,7 +37,7 @@ import org.eclipse.jdt.annotation.Nullable;
     return "ACLU Branch Office.";
   }
 
-  @Override @Nullable public SpecialBlocks firstSpecial() {
+  @Override public SpecialBlocks firstSpecial() {
     return SpecialBlocks.INTEL_SUPERCOMPUTER;
   }
 

@@ -10,10 +10,10 @@ import lcs.android.game.Game;
 import lcs.android.util.Xml;
 import lcs.android.util.Xml.Configurable;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 /** The factory blueprints. */
-public @NonNullByDefault class VehicleType extends AbstractItemType {
+public class VehicleType extends AbstractItemType {
   static class Builder extends AbstractItemTypeBuilder<VehicleType> {
     private final Configurable COLORS = new Configurable() {
       @Override public Configurable xmlChild(String value) {

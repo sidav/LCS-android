@@ -11,11 +11,11 @@ import lcs.android.game.Game;
 import lcs.android.items.AbstractItem;
 import lcs.android.items.AbstractItemType;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 /** contains properties which are only relevant if the location is rented to the LCS */
-public @NonNullByDefault class LCSLocation implements Serializable { // NO_UCD
+public class LCSLocation implements Serializable { // NO_UCD
   LCSLocation(final Location parent) {
     siege = new Siege(parent);
   }
@@ -24,7 +24,7 @@ public @NonNullByDefault class LCSLocation implements Serializable { // NO_UCD
 
   public Set<Compound> compoundWalls = EnumSet.noneOf(Compound.class);
 
-  @Nullable public BusinessFronts frontBusiness = null;
+  public BusinessFronts frontBusiness = null;
 
   public int heat;
 

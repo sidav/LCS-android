@@ -27,9 +27,9 @@ import lcs.android.site.Squad;
 import lcs.android.util.Color;
 import lcs.android.util.Filter;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-public @NonNullByDefault class FootChase extends Encounter {
+public class FootChase extends Encounter {
   /** Brand new foot chase. */
   public FootChase() {}
 

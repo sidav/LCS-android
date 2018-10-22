@@ -27,12 +27,12 @@ import lcs.android.util.Color;
 import lcs.android.util.Getter;
 import lcs.android.util.Setter;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 import android.util.Log;
 
-public @NonNullByDefault class Squad extends ArrayList<Creature> {
+public class Squad extends ArrayList<Creature> {
   private static class LazyInit {
     private static final Squad none;
     static {
@@ -58,7 +58,7 @@ public @NonNullByDefault class Squad extends ArrayList<Creature> {
     return this;
   }
 
-  @Override public boolean add(@Nullable final Creature p) {
+  @Override public boolean add(final Creature p) {
     if (p == null) {
       throw new NullPointerException("Tried to add null to Squad:" + toString());
     }

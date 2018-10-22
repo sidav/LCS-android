@@ -4,7 +4,7 @@ import java.util.Random;
 
 import lcs.android.game.Game;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 import android.util.Log;
 
@@ -29,7 +29,7 @@ import android.util.Log;
  * OF SUCH DAMAGE. Any feedback is very welcome.
  * http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt.html email: m-mat @
  * math.sci.hiroshima-u.ac.jp (remove space) */
-public @NonNullByDefault class Twister extends Random {
+public class Twister extends Random {
   /** Initiate a new Mersenne Twister, with the current system time as a seed value */
   public Twister() {
     seed = System.currentTimeMillis();

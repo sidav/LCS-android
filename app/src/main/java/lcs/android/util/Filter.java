@@ -15,9 +15,9 @@ import lcs.android.items.AbstractItemType;
 import lcs.android.items.Loot;
 import lcs.android.politics.Alignment;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-public @NonNullByDefault class Filter {
+public class Filter {
   public static final IPredicate<Creature> ACTIVE = new IPredicate<Creature>() {
     @Override public boolean apply(final Creature c) {
       return c.health().alive() && c.alignment() == Alignment.LIBERAL && c.hiding() == 0

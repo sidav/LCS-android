@@ -6,7 +6,7 @@ import java.io.IOException;
 
 import lcs.android.game.Game;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 import android.content.Context;
 import android.util.Log;
@@ -24,7 +24,7 @@ import android.util.Log;
  * oos.writeObject(...);
  * <p>
  * ob.run(); */
-public @NonNullByDefault class OutputBuffer implements Runnable {
+public class OutputBuffer implements Runnable {
   public OutputBuffer(final long saveNumber) {
     this.saveNumber = saveNumber;
     savesInProgress++;

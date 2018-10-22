@@ -7,9 +7,9 @@ import lcs.android.game.LcsRandom;
 import lcs.android.politics.Issue;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-@Xml.Name(name = "BUSINESS_CIGARBAR") public @NonNullByDefault class CigarBar extends
+@Xml.Name(name = "BUSINESS_CIGARBAR") public class CigarBar extends
     AbstractSiteType {
   @Override public void allocateMap(final LcsRandom SITERNG) {
     AbstractSiteType.type(JuiceBar.class).allocateMap(SITERNG);

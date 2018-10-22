@@ -19,9 +19,9 @@ import lcs.android.shop.Shop;
 import lcs.android.util.Curses;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-@Xml.Name(name = "BUSINESS_CARDEALERSHIP") public @NonNullByDefault class CarDealership extends
+@Xml.Name(name = "BUSINESS_CARDEALERSHIP") public class CarDealership extends
     AbstractSiteType implements IShop {
   @Override public void generateName(final Location l) {
     l.setName(CreatureName.firstName(Gender.WHITEMALEPATRIARCH) + " " + CreatureName.lastname()

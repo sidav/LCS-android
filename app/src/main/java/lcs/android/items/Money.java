@@ -2,10 +2,10 @@ package lcs.android.items;
 
 import lcs.android.game.Game;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 /** The almighty buck. Presumably as a stack of $1 bills, the LCS can always make change. */
-public @NonNullByDefault class Money extends AbstractItem<MoneyType> {
+public class Money extends AbstractItem<MoneyType> {
   public Money(final int amount) {
     super(MoneyType.instance());
     this.amount = amount;

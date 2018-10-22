@@ -29,13 +29,13 @@ import lcs.android.util.Color;
 import lcs.android.util.Curses;
 import lcs.android.util.Filter;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 import android.util.Pair;
 
 /** If we managed to get a hostage home, convert them to the cause */
-public @NonNullByDefault class Interrogation implements Serializable {
+public class Interrogation implements Serializable {
   private enum Techniques {
     TALK, // 1
     RESTRAIN, // 2
@@ -874,7 +874,7 @@ public @NonNullByDefault class Interrogation implements Serializable {
     return false;
   }
 
-  private void killedHostage(@Nullable final Creature leader, final List<Creature> temppool) {
+  private void killedHostage(final Creature leader, final List<Creature> temppool) {
     // delete interrogation information
     i.interrogations.remove(this);
     cr.health().die();

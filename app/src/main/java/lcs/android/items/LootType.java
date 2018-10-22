@@ -4,10 +4,10 @@ import lcs.android.game.Game;
 import lcs.android.util.Xml;
 import lcs.android.util.Xml.Configurable;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 /** The dreams of thieves. */
-public @NonNullByDefault class LootType extends AbstractItemType {
+public class LootType extends AbstractItemType {
   static class Builder extends AbstractItemTypeBuilder<LootType> {
     private boolean cloth;
 

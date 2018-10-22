@@ -26,15 +26,15 @@ import lcs.android.util.Color;
 import lcs.android.util.Curses;
 import lcs.android.util.Filter;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 import android.util.Log;
 
-public @NonNullByDefault class ReviewMode {
+public class ReviewMode {
   private ReviewMode() {}
 
-  public static void assemblesquad(@Nullable final Squad aSquad) {
+  public static void assemblesquad(final Squad aSquad) {
     Squad squad = aSquad;
     boolean newsquad = false;
     if (squad == null) {
@@ -334,8 +334,8 @@ public @NonNullByDefault class ReviewMode {
       return;
     }
     Collections.sort(baseLoot, new Comparator<AbstractItem<? extends AbstractItemType>>() {
-      @Override public int compare(final @Nullable AbstractItem<? extends AbstractItemType> lhs,
-          final @Nullable AbstractItem<? extends AbstractItemType> rhs) {
+      @Override public int compare(final AbstractItem<? extends AbstractItemType> lhs,
+          final AbstractItem<? extends AbstractItemType> rhs) {
         assert lhs != null;
         assert rhs != null;
         return lhs.equipTitle().compareTo(rhs.equipTitle());

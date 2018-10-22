@@ -53,11 +53,11 @@ import lcs.android.util.Color;
 import lcs.android.util.Curses;
 import lcs.android.util.Filter;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 import android.util.Log;
 
-public @NonNullByDefault class Siege implements Serializable {
+public class Siege implements Serializable {
   public Siege(final Location locale) {
     this.locale = locale;
   }

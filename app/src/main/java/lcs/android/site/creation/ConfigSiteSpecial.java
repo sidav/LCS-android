@@ -5,13 +5,13 @@ import lcs.android.site.map.SpecialBlocks;
 import lcs.android.util.Xml;
 import lcs.android.util.Xml.Configurable;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-@NonNullByDefault class ConfigSiteSpecial extends AbstractConfigSiteCommand {
+class ConfigSiteSpecial extends AbstractConfigSiteCommand {
   private int freq;
 
-  @Nullable private SpecialBlocks special;
+  private SpecialBlocks special;
 
   private int xstart, xend, ystart, yend, zstart, zend;
 

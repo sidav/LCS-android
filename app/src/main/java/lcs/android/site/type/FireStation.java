@@ -5,9 +5,9 @@ import lcs.android.basemode.iface.Location;
 import lcs.android.game.Game;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-@Xml.Name(name = "GOVERNMENT_FIRESTATION") public @NonNullByDefault class FireStation extends
+@Xml.Name(name = "GOVERNMENT_FIRESTATION") public class FireStation extends
     AbstractSiteType {
   @Override public String ccsSiteName() {
     return "ACLU Branch Office.";

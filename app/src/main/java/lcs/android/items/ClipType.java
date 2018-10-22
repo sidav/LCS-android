@@ -4,12 +4,12 @@ import lcs.android.game.Game;
 import lcs.android.util.Xml;
 import lcs.android.util.Xml.Configurable;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 import android.util.Log;
 
 /** The mental picture of a clip that allows us to recognize specific instances of them. */
-public @NonNullByDefault class ClipType extends AbstractItemType {
+public class ClipType extends AbstractItemType {
   static class Builder extends AbstractItemTypeBuilder<ClipType> {
     private int ammo;
 

@@ -9,11 +9,11 @@ import lcs.android.site.map.TileSpecial;
 import lcs.android.util.Xml;
 import lcs.android.util.Xml.Configurable;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-@NonNullByDefault class ConfigSiteScript extends AbstractConfigSiteCommand {
-  @Nullable private SiteMapScript script;
+class ConfigSiteScript extends AbstractConfigSiteCommand {
+  private SiteMapScript script;
 
   private int xstart, xend, ystart, yend, zstart, zend;
 

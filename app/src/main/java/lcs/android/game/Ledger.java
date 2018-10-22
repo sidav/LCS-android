@@ -11,10 +11,10 @@ import lcs.android.util.Color;
 import lcs.android.util.DefaultValueKey;
 import lcs.android.util.SparseMap;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 /** The LCS's bank statements. */
-public @NonNullByDefault class Ledger implements Serializable { // NO_UCD
+public class Ledger implements Serializable { // NO_UCD
   /** Things we spend money on. */
   public enum ExpenseType implements DefaultValueKey<Integer> {
     CARS,

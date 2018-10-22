@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 import lcs.android.R;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -18,20 +18,20 @@ import android.webkit.WebViewClient;
 
 /** displays the html file from assets/*.html as specified in {@link Statics#htmlPage} as a new
  * Android activity. Used for the help file and the license page */
-public @NonNullByDefault class HtmlViewActivity extends Activity { // NO_UCD (instantiated by
+public class HtmlViewActivity extends Activity { // NO_UCD (instantiated by
   // Android Runtime)
   private class HelpClient extends WebViewClient {
-    @Override public boolean shouldOverrideUrlLoading(final @Nullable WebView view,
-        final @Nullable String url) {
+    @Override public boolean shouldOverrideUrlLoading(final WebView view,
+        final String url) {
       fillContent();
       return true;
     }
   }
 
-  @Nullable private WebView mWebView;
+  private WebView mWebView;
 
   /** Called by Android when ready to display. */
-  @Override protected void onCreate(final @Nullable Bundle savedInstanceState) {
+  @Override protected void onCreate(final Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     requestWindowFeature(Window.FEATURE_NO_TITLE);
     getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,

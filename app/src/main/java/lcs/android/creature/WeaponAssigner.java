@@ -7,10 +7,10 @@ import lcs.android.items.ClipType;
 import lcs.android.items.Weapon;
 import lcs.android.items.WeaponType;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-@NonNullByDefault class WeaponAssigner {
+class WeaponAssigner {
   /** Create a weapon type from an xml definition string such as <item>REVOLVER_44:44=4</item>
    * <item>SEMIPISTOL_9MM:9=4</item> <item>AUTORIFLE_AK47:ASSAULT=4</item>
    * <item>SHOTGUN_PUMP:BUCKSHOT=4</item> <item>CARBINE_M4:ASSAULT=4</item>
@@ -39,7 +39,7 @@ import org.eclipse.jdt.annotation.Nullable;
     }
   }
 
-  @Nullable private final ClipType clipType;
+  private final ClipType clipType;
 
   private final Range clipTypeCount;
 

@@ -15,12 +15,12 @@ import lcs.android.creature.CreatureType;
 import lcs.android.game.Game;
 import lcs.android.politics.Issue;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 import android.util.Log;
 
-public @NonNullByDefault class NewsStory implements Serializable, Comparable<NewsStory> {
+public class NewsStory implements Serializable, Comparable<NewsStory> {
   public NewsStory(final StoryType type) {
     this.type = type;
   }
@@ -29,7 +29,7 @@ public @NonNullByDefault class NewsStory implements Serializable, Comparable<New
 
   public boolean positive;
 
-  @Nullable public CrimeSquad siegetype; // this is crime[0]
+  public CrimeSquad siegetype; // this is crime[0]
 
   protected final List<NewsEvent> crimes = new ArrayList<NewsEvent>();
 
@@ -39,11 +39,11 @@ public @NonNullByDefault class NewsStory implements Serializable, Comparable<New
 
   int priority;
 
-  @Nullable Issue view;
+  Issue view;
 
   private boolean claimed = true;
 
-  @Nullable private Creature creature;
+  private Creature creature;
 
   private Location location = Location.none();
 
@@ -64,7 +64,7 @@ public @NonNullByDefault class NewsStory implements Serializable, Comparable<New
   /** we define compareTo so that we can sort new stories more easily: we're only interested in the
    * day's top story anyway. FindBugs complains that we still use Object.equals, but that's alright:
    * even if the events were precisely the same, news stories are unique. */
-  @Override public int compareTo(final @Nullable NewsStory another) {
+  @Override public int compareTo(final NewsStory another) {
     assert another != null;
     return page - another.page;
   }

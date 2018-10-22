@@ -15,12 +15,12 @@ import lcs.android.items.WeaponType;
 import lcs.android.util.Xml;
 import lcs.android.util.Xml.Configurable;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 import android.util.Log;
 
 /** One of the attacks that any given weapon can perform */
-public @NonNullByDefault class Attack implements Xml.Configurable {
+public class Attack implements Xml.Configurable {
   /** The ammo (if any) used in the weapon. */
   public ClipType ammotype;
 

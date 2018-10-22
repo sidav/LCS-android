@@ -24,9 +24,9 @@ import lcs.android.politics.Alignment;
 import lcs.android.politics.Issue;
 import lcs.android.util.Color;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-public @NonNullByDefault class News {
+public class News {
   /* news - major newspaper reporting on lcs and other topics */
   public static void majornewspaper() {
     if (i.endgameState.ordinal() < EndGame.CCS_DEFEATED.ordinal()

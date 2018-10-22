@@ -3,9 +3,9 @@ package lcs.android.news;
 import static lcs.android.game.Game.*;
 import lcs.android.politics.Issue;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-@NonNullByDefault class Headline {
+class Headline {
   static void displaystoryheader(final NewsStory ns, final boolean liberalguardian,
       final Issue header) {
     switch (ns.type) {

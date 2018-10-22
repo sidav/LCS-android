@@ -5,9 +5,9 @@ import lcs.android.activities.iface.Activity;
 import lcs.android.basemode.iface.Location;
 import lcs.android.game.Game;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-public @NonNullByDefault class LocationActivity extends AbstractActivity {
+public class LocationActivity extends AbstractActivity {
   /** Activity which has a location. Imutable.
    * @param type
    * @param location

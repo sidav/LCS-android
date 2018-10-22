@@ -2,11 +2,11 @@ package lcs.android.items;
 
 import lcs.android.game.Game;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 /** The abstract ideal of money. Represents $1: a singleton, created for consistency with the other
  * types of things, it has no other properties. */
-public @NonNullByDefault class MoneyType extends AbstractItemType {
+public class MoneyType extends AbstractItemType {
   private MoneyType() {}
 
   @Override public void displayStats(final int viewID) {

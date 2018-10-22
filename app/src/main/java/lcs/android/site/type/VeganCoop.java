@@ -6,9 +6,9 @@ import lcs.android.game.Game;
 import lcs.android.game.LcsRandom;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-@Xml.Name(name = "BUSINESS_VEGANCOOP") public @NonNullByDefault class VeganCoop extends
+@Xml.Name(name = "BUSINESS_VEGANCOOP") public class VeganCoop extends
     AbstractSiteType {
   @Override public void allocateMap(final LcsRandom SITERNG) {
     AbstractSiteType.type(JuiceBar.class).allocateMap(SITERNG);

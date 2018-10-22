@@ -4,10 +4,10 @@ import java.util.Map.Entry;
 
 import lcs.android.game.Game;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 /** Things you can steal when out and about. */
-public @NonNullByDefault class Loot extends AbstractItem<LootType> {
+public class Loot extends AbstractItem<LootType> {
   public Loot(final String string) {
     super(stringToLootType(string));
   }

@@ -2,9 +2,9 @@ package lcs.android.news;
 
 import static lcs.android.game.Game.*;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-@NonNullByDefault class Ads {
+class Ads {
   private static final String[] sexdesc = { "DTE", "ND", "NS", "VGL" };
 
   private static final String[] sexseek = { "ISO", "LF" };

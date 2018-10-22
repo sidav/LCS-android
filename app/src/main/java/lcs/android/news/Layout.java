@@ -5,9 +5,9 @@ import lcs.android.R;
 import lcs.android.util.Color;
 import lcs.android.util.Curses;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-@NonNullByDefault class Layout {
+class Layout {
   static void preparepage(final NewsStory ns, final boolean liberalGuardian) {
     Curses.setView(R.layout.genericnews);
     if (liberalGuardian) {

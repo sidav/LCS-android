@@ -21,11 +21,11 @@ import lcs.android.site.Squad;
 import lcs.android.util.Xml;
 import lcs.android.util.Xml.Configurable;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 import android.util.Log;
 
-public @NonNullByDefault class Shop extends AbstractShopOption {
+public class Shop extends AbstractShopOption {
   public Shop() {
     fullscreen = true;
     onlySellLegal = false;

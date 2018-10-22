@@ -78,12 +78,12 @@ import lcs.android.util.Color;
 import lcs.android.util.Curses;
 import lcs.android.util.Filter;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 import android.util.Log;
 
-final public @NonNullByDefault class Site {
+final public class Site {
   /** Any attempts to call this site are in error. */
   public Site() {
     current = null;
@@ -889,7 +889,7 @@ final public @NonNullByDefault class Site {
     }
   }
 
-  private boolean makeEncounterU(@Nullable final SpecialBlocks makespecial) {
+  private boolean makeEncounterU(final SpecialBlocks makespecial) {
     final Encounter e = siteLevelmap[locx][locy][locz].encounter = new SiteEncounter();
     i.currentEncounter(e);
     if (makespecial != null) {

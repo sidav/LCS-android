@@ -10,12 +10,12 @@ import java.util.Set;
 
 import lcs.android.game.Game;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 /** SparseMaps are like a normal map, but the keys have a <q>default value</q>, which is not stored
  * on serialization. LCS generally serializes every day, so this time soon adds up */
-public @NonNullByDefault class SparseMap<K extends DefaultValueKey<V>, V> implements Map<K, V>,
+public class SparseMap<K extends DefaultValueKey<V>, V> implements Map<K, V>,
     Serializable {
   private static class EmptySMProxy<K extends DefaultValueKey<?>> implements Serializable {
     private EmptySMProxy(final Class<K> keyclass) {
@@ -50,14 +50,14 @@ public @NonNullByDefault class SparseMap<K extends DefaultValueKey<V>, V> implem
   }
 
   /** returns true if key is an instance of the keyclass, or false otherwise. */
-  @Override public boolean containsKey(final @Nullable Object key) {
+  @Override public boolean containsKey(final Object key) {
     if (keyclass.isInstance(key))
       return true;
     return false;
   }
 
   /** returns whether the map contains a given value. Note that default values are not stored. */
-  @Override public boolean containsValue(final @Nullable Object value) {
+  @Override public boolean containsValue(final Object value) {
     return backingStore.containsValue(value);
   }
 
@@ -67,9 +67,9 @@ public @NonNullByDefault class SparseMap<K extends DefaultValueKey<V>, V> implem
   }
 
   /** gets the value of a key from the map. Will return the default value if the key is missing. */
-  @Nullable @SuppressWarnings("unchecked")// we have checked that key is an instance of
+  @SuppressWarnings("unchecked")// we have checked that key is an instance of
   // the keyclass.
-  @Override public V get(final @Nullable Object key) {
+  @Override public V get(final Object key) {
     if (key == null || !keyclass.isInstance(key))
       return null;
     V value = backingStore.get(key);
@@ -95,7 +95,7 @@ public @NonNullByDefault class SparseMap<K extends DefaultValueKey<V>, V> implem
   }
 
   /** adds the key / value pair to the map and returns the old value. */
-  @Override @Nullable public V put(final @Nullable K key, final @Nullable V value) {
+  @Override public V put(final K key, final V value) {
     if (key == null)
       return null;
     if (key.defaultValue().equals(value)) {
@@ -107,7 +107,7 @@ public @NonNullByDefault class SparseMap<K extends DefaultValueKey<V>, V> implem
   }
 
   /** adds a given map to the backing map. */
-  @Override public void putAll(final @Nullable Map<? extends K, ? extends V> map) {
+  @Override public void putAll(final Map<? extends K, ? extends V> map) {
     if (map == null)
       return;
     for (final Entry<? extends K, ? extends V> e : map.entrySet()) {
@@ -116,7 +116,7 @@ public @NonNullByDefault class SparseMap<K extends DefaultValueKey<V>, V> implem
   }
 
   /** removes a given key from the map, returning true if the key had a non-default value. */
-  @Override public V remove(final @Nullable Object key) {
+  @Override public V remove(final Object key) {
     return backingStore.remove(key);
   }
 
@@ -153,7 +153,7 @@ public @NonNullByDefault class SparseMap<K extends DefaultValueKey<V>, V> implem
   /** returns a new SparseMap. Behaves similarly to a normal Map in practice, although keys have
    * associated default values which are not stored if unnecessary, for faster serialization where
    * that is important.
-   * @param keyclass A @NonNullByDefault class which implements DefaultValueKey to be used as a map
+   * @param keyclass A class which implements DefaultValueKey to be used as a map
    *          key.
    * @return A new SparseMap instance. */
   public static <K extends DefaultValueKey<V>, V> SparseMap<K, V> of(final Class<K> keyclass) {

@@ -8,16 +8,16 @@ import lcs.android.politics.Issue;
 import lcs.android.site.map.SpecialBlocks;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-@Xml.Name(name = "LABORATORY_COSMETICS") public @NonNullByDefault class Cosmetics extends
+@Xml.Name(name = "LABORATORY_COSMETICS") public class Cosmetics extends
     AbstractSiteType {
   @Override public String ccsSiteName() {
     return "Animal Shelter";
   }
 
-  @Override @Nullable public SpecialBlocks commonSpecial() {
+  @Override public SpecialBlocks commonSpecial() {
     return SpecialBlocks.LAB_COSMETICS_CAGEDANIMALS;
   }
 

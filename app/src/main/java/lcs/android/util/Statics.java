@@ -9,17 +9,17 @@ import java.util.concurrent.ConcurrentHashMap;
 import lcs.android.R;
 import lcs.android.game.Game;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 import android.util.Log;
 
 /** The GUI thread {@link LiberalCrimeSquadActivity} is recreated by Android whenever one of many
- * things change: significantly, screen rotation: this @NonNullByDefault class holds onto a number
+ * things change: significantly, screen rotation: this class holds onto a number
  * of things that need to persist between GUI thread changes.
  * <p>
- * Loading of this @NonNullByDefault class also starts the main game thread,
- * <q>Your Liberal Agenda</q>. It's never accessed again, but this @NonNullByDefault class holds
+ * Loading of this class also starts the main game thread,
+ * <q>Your Liberal Agenda</q>. It's never accessed again, but this class holds
  * onto it so it doesn't end up in the garbage.
  * <p>
  * in theory, the fields are only accessed by the GUI thread (methods not though!). Uses concurrent
@@ -28,14 +28,14 @@ import android.util.Log;
  * kind of poor behaviour in the event of many concurrent writes, but these stores are written every
  * time there's a gui update (ie. only from the running gui thread) and only read when there's a gui
  * thread change, so that's okay. */
-public @NonNullByDefault class Statics {
+public class Statics {
   private Statics() {}
 
   /** Contains a list of extra UI Elements which have been added to a View container */
   protected static final List<UIElement.AbstractElement> EXTRAS = Collections
       .synchronizedList(new ArrayList<UIElement.AbstractElement>());
 
-  /** Holds our synchronized GetCh @NonNullByDefault class, to obtain user input */
+  /** Holds our synchronized GetCh class, to obtain user input */
   protected static final GetCh GETCH = GetCh.instance();
 
   /** Contains the list of ViewStubs from a layout which have been inflated. */
@@ -58,9 +58,9 @@ public @NonNullByDefault class Statics {
 
   private static final Thread GAMETHREAD;
 
-  @Nullable private static String htmlPage;
+  private static String htmlPage;
 
-  @Nullable private static LiberalCrimeSquadActivity instance;
+  private static LiberalCrimeSquadActivity instance;
 
   // okay to synchronize volatiles on an int
   private static int lastView = R.layout.main;

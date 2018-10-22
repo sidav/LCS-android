@@ -21,12 +21,12 @@ import lcs.android.monthly.EndGame;
 import lcs.android.util.Color;
 import lcs.android.util.Curses;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 import android.util.Log;
 
-public @NonNullByDefault class Politics {
+public class Politics {
   private static final int WAIT = 5;
 
   public static void congress() {
@@ -525,7 +525,7 @@ public @NonNullByDefault class Politics {
     return sum;
   }
 
-  public static int publicmood(@Nullable final Issue l) {
+  public static int publicmood(final Issue l) {
     if (l == null) {
       Log.e("LCS", "Called publicmood with null", new RuntimeException(
           "Called publicmood with null"));

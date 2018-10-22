@@ -2,7 +2,7 @@ package lcs.android.util;
 
 import lcs.android.game.Game;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 import android.app.Activity;
 import android.content.res.Resources.NotFoundException;
@@ -14,10 +14,10 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-/** A @NonNullByDefault class for adding discrete elements (textboxes and buttons, though extensible)
+/** A class for adding discrete elements (textboxes and buttons, though extensible)
  * to the xml layout views. */
-public @NonNullByDefault class UIElement {
-  /** Builder @NonNullByDefault class for all UI elements. Likely use {@link Curses#ui} to gain an
+public class UIElement {
+  /** Builder class for all UI elements. Likely use {@link Curses#ui} to gain an
    * instance of this builder. Call {@link #add} once completed to add a concrete instance to the
    * current xml layout.
    * <p>
@@ -152,7 +152,7 @@ public @NonNullByDefault class UIElement {
   }
 
   /** Discrete element types all inherit from abstract element. Constructors are protected, use the
-   * builder @NonNullByDefault class {@link UIBuilder} to instantiate. */
+   * builder class {@link UIBuilder} to instantiate. */
   abstract static class AbstractElement {
     protected AbstractElement(final UIBuilder u) { // NO_UCD
       parent = u.parent;
@@ -172,7 +172,7 @@ public @NonNullByDefault class UIElement {
 
     /** Add the UI element to the display.
      * @param a The GUI thread
-     * @param ocl The listener @NonNullByDefault class. */
+     * @param ocl The listener class. */
     abstract protected void add(Activity a, OnClickListener ocl);
   }
 

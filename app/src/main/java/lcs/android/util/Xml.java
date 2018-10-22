@@ -8,8 +8,8 @@ import java.util.List;
 
 import lcs.android.game.Game;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -19,7 +19,7 @@ import android.util.Log;
 /** Initialises something implementing {@link Xml.Configurable} from an XML file. Android pre-comiles
  * xml to binary, so this is super-fast: takes about a millisecond to configure each item (eg.
  * Armor, WeaponType) on my S2. */
-public final @NonNullByDefault class Xml {
+public final class Xml {
   /** Things to be set-up by XML need to implement this. */
   public interface Configurable {
     /** In the event of nested xml values, return something than can deal with it. eg. in the case of
@@ -36,10 +36,10 @@ public final @NonNullByDefault class Xml {
     void xmlSet(String key, String value);
   }
 
-  /** An annotation which gives an XmlName to a @NonNullByDefault class.
+  /** An annotation which gives an XmlName to a class.
    * @author addie */
   @Retention(RetentionPolicy.RUNTIME) public @interface Name {
-    /** The XmlName of the @NonNullByDefault class.
+    /** The XmlName of the class.
      * @return */
     public String name();
   }
@@ -178,9 +178,9 @@ public final @NonNullByDefault class Xml {
     }
   }
 
-  /** Get the declared name of an XmlName'd @NonNullByDefault class.
-   * @param aClass the @NonNullByDefault class to get the name of.
-   * @return the @NonNullByDefault class name, or RuntimeException if missing. */
+  /** Get the declared name of an XmlName'd class.
+   * @param aClass the class to get the name of.
+   * @return the class name, or RuntimeException if missing. */
   public static String getName(final Class<?> aClass) {
     if (aClass.isAnnotationPresent(Name.class)) {
       final Name name = aClass.getAnnotation(Name.class);
@@ -192,7 +192,7 @@ public final @NonNullByDefault class Xml {
   /** Convenience method: changes the text value to an string value. Missing values equal to null
    * will return <q></q>.
    * @param value Likely the value passed in by {@link Configurable#xmlSet} */
-  public static String getText(@Nullable final CharSequence value) {
+  public static String getText(final CharSequence value) {
     if (value == null) {
       return "";
     }

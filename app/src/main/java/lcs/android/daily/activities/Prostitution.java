@@ -12,9 +12,9 @@ import lcs.android.game.Game;
 import lcs.android.game.Ledger;
 import lcs.android.law.Crime;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-public @NonNullByDefault class Prostitution extends ArrayList<Creature> implements DailyActivity {
+public class Prostitution extends ArrayList<Creature> implements DailyActivity {
   @Override public void daily() {
     for (final Creature p : this) {
       // Business once every three days or so

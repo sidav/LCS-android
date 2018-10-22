@@ -7,9 +7,9 @@ import lcs.android.basemode.iface.Location;
 import lcs.android.game.Game;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-@Xml.Name(name = "HOSPITAL_CLINIC") public @NonNullByDefault class Clinic extends AbstractSiteType
+@Xml.Name(name = "HOSPITAL_CLINIC") public class Clinic extends AbstractSiteType
     implements IHospital {
   @Override public void generateName(final Location l) {
     l.setName("The Free CLINIC");

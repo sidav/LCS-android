@@ -7,9 +7,9 @@ import lcs.android.game.Game;
 import lcs.android.politics.Alignment;
 import lcs.android.politics.Issue;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-@NonNullByDefault class Filler {
+class Filler {
   static void constructfillerstory() {
     final StringBuilder story = new StringBuilder();
     final Gender gender = i.rng.choice(Gender.MALE, Gender.FEMALE);

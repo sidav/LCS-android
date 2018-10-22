@@ -3,9 +3,9 @@ package lcs.android.basemode.iface;
 import static lcs.android.game.Game.*;
 import lcs.android.creature.CreatureName;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-@NonNullByDefault enum BusinessFronts {
+enum BusinessFronts {
   INSURANCE {
     @Override public void generateName(final Location l) {
       l.lcs().frontName = CreatureName.lastname();

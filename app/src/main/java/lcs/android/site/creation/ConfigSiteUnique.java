@@ -11,13 +11,13 @@ import lcs.android.site.map.TileSpecial;
 import lcs.android.util.Xml;
 import lcs.android.util.Xml.Configurable;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 import android.util.Log;
 
-@NonNullByDefault class ConfigSiteUnique extends AbstractConfigSiteCommand {
-  @Nullable private SpecialBlocks unique;
+class ConfigSiteUnique extends AbstractConfigSiteCommand {
+  private SpecialBlocks unique;
 
   private int xstart, xend, ystart, yend, zstart, zend;
 

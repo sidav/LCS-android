@@ -15,8 +15,8 @@ import lcs.android.util.LcsRuntimeException;
 import lcs.android.util.Xml;
 import lcs.android.util.Xml.Configurable;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 import android.util.Log;
 
@@ -25,14 +25,14 @@ import android.util.Log;
  * {@link AbstractItem} for instance saves the name of its platonic ideal, and not the item itself,
  * which can then be recovered by {@link #itemTypeForName(String)}.
  * <p>
- * This @NonNullByDefault class is initialized first when {@link Game#load}ing a game from a save,
+ * This class is initialized first when {@link Game#load}ing a game from a save,
  * so that other classes can refer to it when deserializing themselves.
  * <p>
  * Android compiles all xml into a binary form during preparation of .apk files, so this is the
  * fastest way of doing it. Parsing pure text files with a scanner is much, much slower in
  * comparison.
  * @see Xml */
-public @NonNullByDefault class Item { // NO_UCD
+public class Item { // NO_UCD
   /** Items of this type, loaded from xml during initialization. */
   final public Map<String, ArmorType> armor = new HashMap<String, ArmorType>(40 * 2);
 
@@ -171,7 +171,7 @@ public @NonNullByDefault class Item { // NO_UCD
    * @param configurable
    * @param string2 */
   private static void initOther(String what, Configurable configurable,
-      @Nullable Map<String, ?> storage, String... files) {
+      Map<String, ?> storage, String... files) {
     Curses.setText(R.id.loadeditem, what);
     for (String file : files) {
       assert file != null;

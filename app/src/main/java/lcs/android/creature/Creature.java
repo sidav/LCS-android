@@ -48,10 +48,10 @@ import lcs.android.util.Curses;
 import lcs.android.util.Getter;
 import lcs.android.util.Setter;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-public @NonNullByDefault class Creature implements Serializable {
+public class Creature implements Serializable {
   public enum Situation {
     TURNED,
     DIED,
@@ -75,7 +75,7 @@ public @NonNullByDefault class Creature implements Serializable {
 
   private final LcsDate birth = LcsDate.withAge(18 + i.rng.nextInt(40));
 
-  @Nullable private Vehicle car = null;
+  private Vehicle car = null;
 
   private final CreatureCrime crime = new CreatureCrime(this);
 
@@ -95,7 +95,7 @@ public @NonNullByDefault class Creature implements Serializable {
 
   private int hiding = 0; // -1 for indefinitely
 
-  @Nullable private Creature hire = null;
+  private Creature hire = null;
 
   private int income;
 
@@ -113,11 +113,11 @@ public @NonNullByDefault class Creature implements Serializable {
 
   private String name;
 
-  @Nullable private Vehicle prefCar = null;
+  private Vehicle prefCar = null;
 
   private boolean prefIsDriver = false;
 
-  @Nullable private Creature prisoner = null;
+  private Creature prisoner = null;
 
   private CreatureName properName;
 
@@ -127,7 +127,7 @@ public @NonNullByDefault class Creature implements Serializable {
 
   private SpecialAttacks specialAttack = SpecialAttacks.NONE;
 
-  @Nullable private Squad squad = null;
+  private Squad squad = null;
 
   private int stunned = 0;
 
@@ -141,7 +141,7 @@ public @NonNullByDefault class Creature implements Serializable {
     return activity;
   }
 
-  public Creature activity(@Nullable final AbstractActivity aActivity) {
+  public Creature activity(final AbstractActivity aActivity) {
     if (aActivity == null) {
       throw new IllegalArgumentException("activity was null");
     }
@@ -289,7 +289,7 @@ public @NonNullByDefault class Creature implements Serializable {
     return car;
   }
 
-  @Setter public Creature car(@Nullable final Vehicle aCar) {
+  @Setter public Creature car(final Vehicle aCar) {
     car = aCar;
     return this;
   }
@@ -688,7 +688,7 @@ public @NonNullByDefault class Creature implements Serializable {
    * @param a An armor
    * @param lootpile Where to discard to, if needed. */
   public void giveArmor(final Armor a,
-      @Nullable final List<AbstractItem<? extends AbstractItemType>> lootpile) {
+      final List<AbstractItem<? extends AbstractItemType>> lootpile) {
     if (!a.isEmpty()) {
       strip(lootpile);
       armor = a.split(1);
@@ -899,11 +899,11 @@ public @NonNullByDefault class Creature implements Serializable {
     return type.observationSkill();
   }
 
-  @Nullable @Getter public Vehicle prefCar() { // TODO make maybe
+  @Getter public Vehicle prefCar() { // TODO make maybe
     return prefCar;
   }
 
-  @Setter public Creature prefCar(@Nullable final Vehicle prefCar) {
+  @Setter public Creature prefCar(final Vehicle prefCar) {
     this.prefCar = prefCar;
     return this;
   }
@@ -998,11 +998,11 @@ public @NonNullByDefault class Creature implements Serializable {
     setText(R.id.asSkills, str.toString());
   }
 
-  @Nullable @Getter public Creature prisoner() {
+  @Getter public Creature prisoner() {
     return prisoner;
   }
 
-  @Setter public Creature prisoner(final @Nullable Creature prisoner) {
+  @Setter public Creature prisoner(final Creature prisoner) {
     this.prisoner = prisoner;
     return this;
   }
@@ -1153,7 +1153,7 @@ public @NonNullByDefault class Creature implements Serializable {
 
   /** Prompt to turn new recruit into a sleeper
    * @param recruiter not null */
-  public Creature sleeperizePrompt(@Nullable final Creature recruiter) {
+  public Creature sleeperizePrompt(final Creature recruiter) {
     if (recruiter == null) {
       throw new NullPointerException();
     }
@@ -1197,14 +1197,14 @@ public @NonNullByDefault class Creature implements Serializable {
 
   /** The creature's current sqaud.
    * @return */
-  @Nullable @Getter public Squad squad() {
+  @Getter public Squad squad() {
     return squad;
   }
 
   /** Assigns the creature to a squad
    * @param aSquad may be null
    * @return this */
-  public Creature squad(@Nullable final Squad aSquad) {
+  public Creature squad(final Squad aSquad) {
     if (squad == aSquad) {
       return this;
     }
@@ -1220,7 +1220,7 @@ public @NonNullByDefault class Creature implements Serializable {
 
   /** Discards any clothing worn to a lootpile
    * @param lootpile can be null */
-  public void strip(@Nullable final List<AbstractItem<? extends AbstractItemType>> lootpile) {
+  public void strip(final List<AbstractItem<? extends AbstractItemType>> lootpile) {
     if (armor != Armor.none() && lootpile != null) {
       lootpile.add(armor);
     }

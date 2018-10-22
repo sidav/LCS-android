@@ -7,9 +7,9 @@ import lcs.android.game.LcsRandom;
 import lcs.android.site.creation.SiteMap;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-@Xml.Name(name = "BUSINESS_JUICEBAR") public @NonNullByDefault class JuiceBar extends
+@Xml.Name(name = "BUSINESS_JUICEBAR") public class JuiceBar extends
     AbstractSiteType {
   @Override public void allocateMap(final LcsRandom SITERNG) {
     for (int x = SiteMap.MAPX / 2 - 4; x <= SiteMap.MAPX / 2 + 4; x++) {

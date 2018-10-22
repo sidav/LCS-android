@@ -16,11 +16,11 @@ import lcs.android.politics.Issue;
 import lcs.android.util.Xml;
 import lcs.android.util.Xml.Configurable;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 import android.util.Log;
 
-public @NonNullByDefault class WeaponType extends AbstractItemType {
+public class WeaponType extends AbstractItemType {
   static class Builder extends AbstractItemTypeBuilder<WeaponType> {
     private final List<Attack> attacks_ = new ArrayList<Attack>();
 

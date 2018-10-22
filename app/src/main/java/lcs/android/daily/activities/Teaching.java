@@ -12,9 +12,9 @@ import lcs.android.game.Game;
 import lcs.android.game.Ledger;
 import lcs.android.util.Filter;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-public @NonNullByDefault class Teaching extends ArrayList<Creature> implements DailyActivity {
+public class Teaching extends ArrayList<Creature> implements DailyActivity {
   @Override public void daily() {
     final List<Creature> teachers = this;
     // Teaching
@@ -23,7 +23,7 @@ public @NonNullByDefault class Teaching extends ArrayList<Creature> implements D
       int cost = 0, studentcount = 0;
       // Build a list of skills to train and determine the cost for
       // running
-      // a @NonNullByDefault class depending on what the teacher is teaching
+      // a class depending on what the teacher is teaching
       switch (t.activity().type()) {
       case TEACH_POLITICS:
         cost = 2;

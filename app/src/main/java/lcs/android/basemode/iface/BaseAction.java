@@ -18,10 +18,10 @@ import lcs.android.util.Color;
 import lcs.android.util.Curses;
 import lcs.android.util.UIElement.UIBuilder;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-@NonNullByDefault class BaseAction {
+class BaseAction {
   private BaseAction() {}
 
   protected static void burnFlag(final String image) {
@@ -305,7 +305,7 @@ import org.eclipse.jdt.annotation.Nullable;
   }
 
   private static void investLocationButton(final int cost, final char key, final String text,
-      @Nullable final Compound prereq) {
+      final Compound prereq) {
     if (prereq == null || i.currentLocation.compoundWalls().contains(prereq)) {
       return;
     } else if (i.ledger.funds() > cost) {

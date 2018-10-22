@@ -8,12 +8,12 @@ import java.util.List;
 
 import lcs.android.util.Curses;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 import android.util.Log;
 
 /** Rolls some dice to determine success and failure using an adapted EABA system. */
-public @NonNullByDefault class SkillRoll {
+public class SkillRoll {
   /** Alea iacta est. This die rolling system (and the associated difficulty ratings) is adapted from
    * EABA, which uses a system of rolling a number of six-sided dice equal to the ability score
    * divided by three. The top three dice are used, the rest discarded. Finally, any additional

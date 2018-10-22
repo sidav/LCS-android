@@ -7,10 +7,10 @@ import lcs.android.politics.Issue;
 import lcs.android.site.map.SpecialBlocks;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-@Xml.Name(name = "CORPORATE_HEADQUARTERS") public @NonNullByDefault class Headquarters extends
+@Xml.Name(name = "CORPORATE_HEADQUARTERS") public class Headquarters extends
     AbstractSiteType {
   @Override public String alarmResponseString() {
     return ": MERCENARIES RESPONDING";
@@ -36,7 +36,7 @@ import org.eclipse.jdt.annotation.Nullable;
     return "Welfare Assistance Agency.";
   }
 
-  @Override @Nullable public SpecialBlocks firstSpecial() {
+  @Override public SpecialBlocks firstSpecial() {
     return SpecialBlocks.CORPORATE_FILES;
   }
 

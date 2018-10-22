@@ -16,9 +16,9 @@ import lcs.android.items.Loot;
 import lcs.android.law.Crime;
 import lcs.android.politics.Issue;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-public @NonNullByDefault class Hack extends ArrayList<Creature> implements DailyActivity {
+public class Hack extends ArrayList<Creature> implements DailyActivity {
   @Override public void daily() {
     final List<Creature> hack = this;
     if (hack.size() > 0) {

@@ -4,10 +4,10 @@ import java.util.Map.Entry;
 
 import lcs.android.game.Game;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 /** A clip full of ammunition, such as you might hold in your hand. */
-public @NonNullByDefault class Clip extends AbstractItem<ClipType> {
+public class Clip extends AbstractItem<ClipType> {
   public Clip(final ClipType ct) {
     this(ct, 1);
   }

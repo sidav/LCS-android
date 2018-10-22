@@ -6,9 +6,9 @@ import lcs.android.game.Game;
 import lcs.android.shop.Shop;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-@Xml.Name(name = "BUSINESS_ARMSDEALER") public @NonNullByDefault class ArmsDealer extends
+@Xml.Name(name = "BUSINESS_ARMSDEALER") public class ArmsDealer extends
     AbstractSiteType {
   @Override public boolean canBuyGuns() {
     return true;

@@ -8,16 +8,16 @@ import lcs.android.politics.Issue;
 import lcs.android.site.map.SpecialBlocks;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-@Xml.Name(name = "GOVERNMENT_POLICESTATION") public @NonNullByDefault class PoliceStation extends
+@Xml.Name(name = "GOVERNMENT_POLICESTATION") public class PoliceStation extends
     AbstractSiteType {
   @Override public String ccsSiteName() {
     return "Seedy Back Alley(tm).";
   }
 
-  @Override @Nullable public SpecialBlocks firstSpecial() {
+  @Override public SpecialBlocks firstSpecial() {
     return SpecialBlocks.POLICESTATION_LOCKUP;
   }
 

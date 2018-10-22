@@ -10,10 +10,10 @@ import java.io.Serializable;
 import lcs.android.util.Getter;
 import lcs.android.util.Setter;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 /** @author addie */
-public @NonNullByDefault class Attitude implements Serializable {
+public class Attitude implements Serializable {
   public Attitude(final Issue issue) {
     this.issue = issue;
     law = issue.gameStartAlignment;

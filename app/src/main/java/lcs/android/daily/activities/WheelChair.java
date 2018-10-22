@@ -10,11 +10,11 @@ import lcs.android.creature.Creature;
 import lcs.android.creature.CreatureFlag;
 import lcs.android.game.Game;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 /** Daily activity for Liberals looking to obtain a wheelchair. 50% chance of success.
  * @author addie */
-public @NonNullByDefault class WheelChair extends ArrayList<Creature> implements DailyActivity {
+public class WheelChair extends ArrayList<Creature> implements DailyActivity {
   @Override public void daily() {
     for (final Creature c : this) {
       getwheelchair(c);

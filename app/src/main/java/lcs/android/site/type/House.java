@@ -8,10 +8,10 @@ import lcs.android.politics.Issue;
 import lcs.android.site.map.SpecialBlocks;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-@Xml.Name(name = "CORPORATE_HOUSE") public @NonNullByDefault class House extends AbstractSiteType {
+@Xml.Name(name = "CORPORATE_HOUSE") public class House extends AbstractSiteType {
   @Override public String alarmResponseString() {
     return ": MERCENARIES RESPONDING";
   }
@@ -36,7 +36,7 @@ import org.eclipse.jdt.annotation.Nullable;
     return "Richard Dawkins Food Bank.";
   }
 
-  @Override @Nullable public SpecialBlocks firstSpecial() {
+  @Override public SpecialBlocks firstSpecial() {
     return SpecialBlocks.HOUSE_PHOTOS;
   }
 

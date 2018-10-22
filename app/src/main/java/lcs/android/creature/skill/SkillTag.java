@@ -5,10 +5,10 @@ import lcs.android.util.Curses;
 import lcs.android.util.HashCodeBuilder;
 import lcs.android.util.UIElement;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-public @NonNullByDefault class SkillTag implements Comparable<SkillTag> {
+public class SkillTag implements Comparable<SkillTag> {
   public SkillTag(final String string, final int sv) {
     text = string;
     value = sv;
@@ -55,14 +55,14 @@ public @NonNullByDefault class SkillTag implements Comparable<SkillTag> {
     builder.add();
   }
 
-  @Override public int compareTo(@Nullable final SkillTag another) {
+  @Override public int compareTo(final SkillTag another) {
     assert another != null;
     if (another.value != value)
       return another.value - value;
     return text.compareTo(another.text);
   }
 
-  @Override public boolean equals(final @Nullable Object o) {
+  @Override public boolean equals(final Object o) {
     if (o == this)
       return true;
     if (!(o instanceof SkillTag))

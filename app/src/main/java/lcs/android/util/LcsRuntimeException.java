@@ -2,10 +2,10 @@ package lcs.android.util;
 
 import lcs.android.game.Game;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 /** Generally, most exceptions are fatal to LCS, so we rethrow them as this exception */
-public @NonNullByDefault class LcsRuntimeException extends RuntimeException {
+public class LcsRuntimeException extends RuntimeException {
   public LcsRuntimeException(final String string) {
     super(string);
   }

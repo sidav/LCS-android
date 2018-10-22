@@ -28,10 +28,10 @@ import lcs.android.site.type.AbstractSiteType;
 import lcs.android.util.Color;
 import lcs.android.util.Filter;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-public @NonNullByDefault class CarChase extends Encounter {
+public class CarChase extends Encounter {
   /** @param current where to have the car chase. */
   public CarChase(final Location current) {
     location = current;
@@ -41,7 +41,7 @@ public @NonNullByDefault class CarChase extends Encounter {
 
   final List<Vehicle> friendcar = new ArrayList<Vehicle>();
 
-  @Nullable private Location location;
+  private Location location;
 
   boolean canpullover = false;
 
@@ -433,7 +433,7 @@ public @NonNullByDefault class CarChase extends Encounter {
 
   private final static int DRIVING_RANDOMNESS = 13;
 
-  public static int driveSkill(final Creature liberal, @Nullable final Vehicle vehicle) {
+  public static int driveSkill(final Creature liberal, final Vehicle vehicle) {
     if (vehicle == null) {
       throw new IllegalArgumentException("vehicle was null");
     }

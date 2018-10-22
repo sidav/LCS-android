@@ -15,9 +15,9 @@ import lcs.android.items.AbstractItemType;
 import lcs.android.items.Armor;
 import lcs.android.site.Squad;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-public @NonNullByDefault class RepairArmor extends ArrayList<Creature> implements DailyActivity {
+public class RepairArmor extends ArrayList<Creature> implements DailyActivity {
   @Override public void daily() {
     for (final Creature c : this) {
       repairarmor(c);

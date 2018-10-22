@@ -8,10 +8,10 @@ import lcs.android.politics.Issue;
 import lcs.android.site.map.SpecialBlocks;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-@Xml.Name(name = "GOVERNMENT_ARMYBASE") public @NonNullByDefault class ArmyBase extends
+@Xml.Name(name = "GOVERNMENT_ARMYBASE") public class ArmyBase extends
     AbstractSiteType {
   @Override public String alarmResponseString() {
     return ": SOLDIERS AND TANKS RESPONDING";
@@ -37,7 +37,7 @@ import org.eclipse.jdt.annotation.Nullable;
     return "Greenpeace Offices.";
   }
 
-  @Override @Nullable public SpecialBlocks firstSpecial() {
+  @Override public SpecialBlocks firstSpecial() {
     return SpecialBlocks.ARMYBASE_ARMORY;
   }
 

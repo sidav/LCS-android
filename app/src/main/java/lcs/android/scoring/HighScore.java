@@ -17,13 +17,13 @@ import lcs.android.game.Game;
 import lcs.android.util.Color;
 import lcs.android.util.Statics;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 import android.content.Context;
 import android.util.Log;
 
-public @NonNullByDefault class HighScore implements Serializable {
+public class HighScore implements Serializable {
   public int ccsKills;
 
   public int ccsSiegeKills;
@@ -48,7 +48,7 @@ public @NonNullByDefault class HighScore implements Serializable {
 
   public int spent;
 
-  @Nullable private EndType endtype;
+  private EndType endtype;
 
   @Override public String toString() {
     final StringBuilder str = new StringBuilder();
@@ -83,7 +83,7 @@ public @NonNullByDefault class HighScore implements Serializable {
     i.score.endtype = endtype;
     highScoresArray.add(i.score);
     Collections.sort(highScoresArray, new Comparator<HighScore>() {
-      @Override public int compare(final @Nullable HighScore lhs, final @Nullable HighScore rhs) {
+      @Override public int compare(final HighScore lhs, final HighScore rhs) {
         assert lhs != null;
         assert rhs != null;
         return lhs.date.compareTo(rhs.date);

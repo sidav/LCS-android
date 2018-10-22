@@ -7,11 +7,11 @@ import lcs.android.util.DefaultValueKey;
 import lcs.android.util.Xml;
 import lcs.android.util.Xml.Configurable;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 import android.util.Log;
 
-public @NonNullByDefault enum CrimeSquad implements Configurable, DefaultValueKey<Boolean> {
+public enum CrimeSquad implements Configurable, DefaultValueKey<Boolean> {
   AMRADIO(Color.RED),
   CABLENEWS(Color.RED),
   CCS(Color.RED),

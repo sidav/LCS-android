@@ -15,12 +15,12 @@ import lcs.android.creature.Creature;
 import lcs.android.game.Game;
 import lcs.android.util.Color;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 /** definite item(s) of some type. Keeps track of the count of items in the pile; subclasses may also
  * have other quality modifiers. */
-abstract public @NonNullByDefault class AbstractItem<AIT extends AbstractItemType> implements
+abstract public class AbstractItem<AIT extends AbstractItemType> implements
     Serializable {
   protected AbstractItem(final AIT type) {
     this.type = type;
@@ -111,8 +111,8 @@ abstract public @NonNullByDefault class AbstractItem<AIT extends AbstractItemTyp
   }
 
   final static private Comparator<AbstractItem<? extends AbstractItemType>> ALPHABETICALLY = new Comparator<AbstractItem<? extends AbstractItemType>>() {
-    @Override public int compare(final @Nullable AbstractItem<? extends AbstractItemType> object1,
-        final @Nullable AbstractItem<? extends AbstractItemType> object2) {
+    @Override public int compare(final AbstractItem<? extends AbstractItemType> object1,
+        final AbstractItem<? extends AbstractItemType> object2) {
       assert object1 != null;
       assert object2 != null;
       return object1.toString().compareTo(object2.toString());
@@ -143,7 +143,7 @@ abstract public @NonNullByDefault class AbstractItem<AIT extends AbstractItemTyp
    * @param loot The items to select from
    * @param loc The location of the squad */
   public static void equip(final List<AbstractItem<? extends AbstractItemType>> loot,
-      @Nullable final Location loc) {
+      final Location loc) {
     // if (i.activeSquad == null) {
     // return;
     // }

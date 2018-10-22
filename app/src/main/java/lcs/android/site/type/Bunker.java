@@ -4,9 +4,9 @@ import lcs.android.basemode.iface.Location;
 import lcs.android.game.Game;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-@Xml.Name(name = "OUTDOOR_BUNKER") public @NonNullByDefault class Bunker extends AbstractSiteType {
+@Xml.Name(name = "OUTDOOR_BUNKER") public class Bunker extends AbstractSiteType {
   @Override public boolean canBuyGuns() {
     return true;
   }

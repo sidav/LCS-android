@@ -4,9 +4,9 @@ import lcs.android.basemode.iface.Location;
 import lcs.android.game.Game;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-@Xml.Name(name = "HOSPITAL_UNIVERSITY") public @NonNullByDefault class University extends Clinic {
+@Xml.Name(name = "HOSPITAL_UNIVERSITY") public class University extends Clinic {
   @Override public void generateName(final Location l) {
     l.setName("The University Hospital");
   }

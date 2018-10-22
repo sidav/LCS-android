@@ -4,9 +4,9 @@ import lcs.android.creature.Creature;
 import lcs.android.site.Squad;
 import lcs.android.util.Xml.Configurable;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-abstract @NonNullByDefault class AbstractShopOption implements Configurable {
+abstract class AbstractShopOption implements Configurable {
   protected boolean allowSelling = false;
 
   protected String description = "UNDEFINED";

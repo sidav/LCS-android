@@ -7,9 +7,9 @@ import lcs.android.game.Game;
 import lcs.android.site.type.AbstractSiteType.UniqueNamedSite;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-@Xml.Name(name = "RESIDENTIAL_APARTMENT") public @NonNullByDefault class Apartment extends
+@Xml.Name(name = "RESIDENTIAL_APARTMENT") public class Apartment extends
     UniqueNamedSite {
   @Override public boolean canMap() {
     return false;

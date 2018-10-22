@@ -30,12 +30,12 @@ import lcs.android.site.type.Tenement;
 import lcs.android.util.Color;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 /** Does all the prompting (On my 18th birthday, I...) at the start of a game. Does all the set-up
  * based on those choices */
-public @NonNullByDefault class NewGame {
+public class NewGame {
   private enum Recruits {
     GANG {
       @Override void create(final Creature boss, final Squad squad, final Location where) {
@@ -165,7 +165,7 @@ public @NonNullByDefault class NewGame {
 
   private static Recruits recruits = Recruits.NONE;
 
-  @Nullable private static Vehicle startcar = null;
+  private static Vehicle startcar = null;
 
   /** Draws all of the prompts for what kind of game type we want to play, and prompts for the
    * player's name, gender, and history. */

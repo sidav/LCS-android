@@ -5,9 +5,9 @@ import lcs.android.game.Game;
 import lcs.android.politics.Issue;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-@Xml.Name(name = "RESIDENTIAL_APARTMENT_UPSCALE") public @NonNullByDefault class ApartmentUpscale
+@Xml.Name(name = "RESIDENTIAL_APARTMENT_UPSCALE") public class ApartmentUpscale
     extends Apartment {
   @Override public String ccsSiteName() {
     return "University Dormitory.";

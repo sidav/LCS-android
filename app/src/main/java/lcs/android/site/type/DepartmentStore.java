@@ -7,9 +7,9 @@ import lcs.android.game.Game;
 import lcs.android.shop.Shop;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-@Xml.Name(name = "BUSINESS_DEPTSTORE") public @NonNullByDefault class DepartmentStore extends
+@Xml.Name(name = "BUSINESS_DEPTSTORE") public class DepartmentStore extends
     AbstractSiteType implements IShop {
   @Override public void generateName(final Location l) {
     l.setName(CreatureName.lastname() + "'s Department Store");

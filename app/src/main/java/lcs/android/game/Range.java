@@ -2,7 +2,7 @@ package lcs.android.game;
 
 import static lcs.android.game.Game.*;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 /** Produces a random number in a range.
  * <p>
@@ -12,7 +12,7 @@ import org.eclipse.jdt.annotation.NonNullByDefault;
  * each time, and lets us get a value from it easily.
  * <p>
  * Ranges are inclusive, so 8+2 returns either 8, 9, or 10. */
-public @NonNullByDefault class Range {
+public class Range {
   /** Creates a new random number range object.
    * @param s A string of the form either <q>fixed+random</q>, or <q>fixed</q>, probably obtained
    *          from an xml file. */

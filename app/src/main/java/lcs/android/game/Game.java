@@ -66,17 +66,17 @@ import lcs.android.util.SparseMap;
 import lcs.android.util.Statics;
 import lcs.android.util.ThemeName;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 import android.os.Environment;
 import android.util.Log;
 
-/** This @NonNullByDefault class contains all of the static fields containing data about the current
+/** This class contains all of the static fields containing data about the current
  * game in play, and methods for loading, saving and initializing new games.
  * <p>
  * Fields marked as {@code transient} only affect the current site, and could possibly be moved to
  * {@link Site} as static fields. */
-public final @NonNullByDefault class Game implements Serializable {
+public final class Game implements Serializable {
   /** The following exception gets thrown when we've finished the game, and want to return to the
    * prompt to play again. This gets caught in the {@link #main} method. */
   private static class GameOverException extends RuntimeException {

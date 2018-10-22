@@ -1,9 +1,9 @@
 package lcs.android.util;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-public @NonNullByDefault class HashCodeBuilder implements IBuilder<Integer> {
+public class HashCodeBuilder implements IBuilder<Integer> {
   private int hashCode = 17;
 
   public HashCodeBuilder add(final boolean b) {
@@ -32,7 +32,7 @@ public @NonNullByDefault class HashCodeBuilder implements IBuilder<Integer> {
     return this;
   }
 
-  public HashCodeBuilder add(@Nullable final Object o) {
+  public HashCodeBuilder add(final Object o) {
     if (o != null) {
       hashCode += 31 * o.hashCode();
     }

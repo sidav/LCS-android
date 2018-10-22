@@ -7,16 +7,16 @@ import lcs.android.politics.Issue;
 import lcs.android.site.map.SpecialBlocks;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-@Xml.Name(name = "LABORATORY_GENETIC") public @NonNullByDefault class Genetic extends
+@Xml.Name(name = "LABORATORY_GENETIC") public class Genetic extends
     AbstractSiteType {
   @Override public String ccsSiteName() {
     return "Research Ethics Commission HQ.";
   }
 
-  @Override @Nullable public SpecialBlocks commonSpecial() {
+  @Override public SpecialBlocks commonSpecial() {
     return SpecialBlocks.LAB_GENETIC_CAGEDANIMALS;
   }
 

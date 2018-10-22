@@ -7,17 +7,17 @@ import lcs.android.game.Game;
 import lcs.android.util.Xml;
 import lcs.android.util.Xml.Configurable;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 import android.util.Log;
 
-public @NonNullByDefault class ConfigSiteMap implements Configurable {
+public class ConfigSiteMap implements Configurable {
   private String name = "";
 
   private final List<AbstractConfigSiteCommand> commands = new ArrayList<AbstractConfigSiteCommand>();
 
-  @Nullable private AbstractConfigSiteCommand currentCommand;
+  private AbstractConfigSiteCommand currentCommand;
 
   private String parent = "";
 

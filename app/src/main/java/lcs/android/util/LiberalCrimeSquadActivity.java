@@ -6,8 +6,8 @@ import java.util.Map.Entry;
 import lcs.android.game.Game;
 import lcs.android.util.UIElement.AbstractElement;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -33,9 +33,9 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-/** The GUI thread @NonNullByDefault class for LCS: responsible for drawing and updating the screen,
+/** The GUI thread class for LCS: responsible for drawing and updating the screen,
  * and responding to events */
-@SuppressLint("HandlerLeak") public @NonNullByDefault class LiberalCrimeSquadActivity extends
+@SuppressLint("HandlerLeak") public class LiberalCrimeSquadActivity extends
     Activity implements IProtocol, // NO_UCD
     OnClickListener {
   /** This actually does the work of keeping the GUI up-to-date. Use:<br>
@@ -43,7 +43,7 @@ import android.widget.Toast;
    * Statics.instance().uiHandler.obtainMessage(Protocol.SOMETHING, AnObject).sendMessage();
    * @see IProtocol */
   public class LCSHandler extends Handler implements OnClickListener { // NO_UCD
-    @Override public void handleMessage(final @Nullable Message msg) {
+    @Override public void handleMessage(final Message msg) {
       if (msg == null)
         return;
       switch (msg.what) {
@@ -166,7 +166,7 @@ import android.widget.Toast;
       }
     }
 
-    @Override public void onClick(@Nullable final View v) {
+    @Override public void onClick(final View v) {
       int kp = ' ';
       if (v != null && v.getTag() != null) {
         kp = ((String) v.getTag()).charAt(0);
@@ -209,7 +209,7 @@ import android.widget.Toast;
       }
     }
 
-    private void setListeners(@Nullable final ViewGroup vg) {
+    private void setListeners(final ViewGroup vg) {
       if (vg == null) {
         Log.e(Game.LCS, "UI setListeners viewgroup is null");
         return;
@@ -255,13 +255,13 @@ import android.widget.Toast;
     return ((EditText) v).getText().toString();
   }
 
-  @Override public void onClick(final @Nullable View v) {
+  @Override public void onClick(final View v) {
     uiHandler.sendEmptyMessage(ON_CLICK);
   }
 
   /** Android calls this to start us up. Lets {@link Statics} know we're here, makes us fullscreen,
    * and redraws what was on the screen before, if anything. */
-  @Override public void onCreate(final @Nullable Bundle savedInstanceState) {
+  @Override public void onCreate(final Bundle savedInstanceState) {
     Log.d(Game.LCS, "Hello, world!");
     Statics.setInstance(this);
     ThemeName.restoreTheme();
@@ -273,7 +273,7 @@ import android.widget.Toast;
     uiHandler.sendEmptyMessage(ON_CREATE);
   }
 
-  @Override public boolean onCreateOptionsMenu(final @Nullable Menu menu) {
+  @Override public boolean onCreateOptionsMenu(final Menu menu) {
     Log.d("Control", "OCOM");
     if (menu == null)
       return false;
@@ -284,7 +284,7 @@ import android.widget.Toast;
     return true;
   }
 
-  @Override public boolean onOptionsItemSelected(final @Nullable MenuItem item) {
+  @Override public boolean onOptionsItemSelected(final MenuItem item) {
     int selected = -1;
     for (int i = 0; i < mis.length; ++i) {
       if (item == mis[i]) {
@@ -295,7 +295,7 @@ import android.widget.Toast;
     return true;
   }
 
-  @Override public boolean onTouchEvent(final @Nullable MotionEvent event) {
+  @Override public boolean onTouchEvent(final MotionEvent event) {
     uiHandler.obtainMessage(ON_TOUCH_EVENT, event).sendToTarget();
     return true;
   }

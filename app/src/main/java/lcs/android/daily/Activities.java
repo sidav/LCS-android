@@ -37,9 +37,9 @@ import lcs.android.site.type.Clinic;
 import lcs.android.site.type.Shelter;
 import lcs.android.util.Filter;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-public @NonNullByDefault class Activities {
+public class Activities {
   private static final DailyActivity[] activities;
 
   private static final DailyActivity art = new Art();

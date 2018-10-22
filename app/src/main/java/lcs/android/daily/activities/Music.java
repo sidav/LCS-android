@@ -13,9 +13,9 @@ import lcs.android.game.Game;
 import lcs.android.game.Ledger;
 import lcs.android.politics.Politics;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-public @NonNullByDefault class Music extends ArrayList<Creature> implements DailyActivity {
+public class Music extends ArrayList<Creature> implements DailyActivity {
   @Override public void daily() {
     final List<Creature> music = this;
     int money;

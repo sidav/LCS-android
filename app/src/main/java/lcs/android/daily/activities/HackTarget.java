@@ -5,7 +5,7 @@ import lcs.android.game.CheckDifficulty;
 import lcs.android.law.Crime;
 import lcs.android.politics.Issue;
 
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.Nullable;
 
 enum HackTarget {
   CIA("caused a scare by breaking into a CIA network.", CheckDifficulty.SUPERHEROIC,
@@ -44,7 +44,7 @@ enum HackTarget {
     howMuch = 0;
   }
 
-  @Nullable final Issue changeOpinion;
+  final Issue changeOpinion;
 
   final Crime crime;
 

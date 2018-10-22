@@ -19,9 +19,9 @@ import lcs.android.politics.Alignment;
 import lcs.android.politics.Issue;
 import lcs.android.util.Color;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-public @NonNullByDefault class Trouble extends ArrayList<Creature> implements DailyActivity {
+public class Trouble extends ArrayList<Creature> implements DailyActivity {
   @Override public void daily() {
     final List<Creature> trouble = this;
     if (trouble.size() > 0) {

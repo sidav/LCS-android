@@ -6,12 +6,12 @@ import lcs.android.combat.Attack;
 import lcs.android.game.Game;
 import lcs.android.util.Curses;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 import android.util.Log;
 
-public @NonNullByDefault class Weapon extends AbstractItem<WeaponType> {
+public class Weapon extends AbstractItem<WeaponType> {
   private static class LazyInit {
     private static Weapon none;
     static {
@@ -30,7 +30,7 @@ public @NonNullByDefault class Weapon extends AbstractItem<WeaponType> {
 
   private int ammo_;
 
-  @Nullable private ClipType loaded_cliptype_;
+  private ClipType loaded_cliptype_;
 
   public boolean acceptableAmmo(final Clip c) {
     return type.acceptableAmmo(c.type);
@@ -190,7 +190,7 @@ public @NonNullByDefault class Weapon extends AbstractItem<WeaponType> {
     return false;
   }
 
-  @Nullable private static Weapon none = null;
+  private static Weapon none = null;
 
   private static final long serialVersionUID = Game.VERSION;
 

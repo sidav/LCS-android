@@ -8,12 +8,12 @@ import java.util.List;
 import lcs.android.creature.Creature;
 import lcs.android.game.Game;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 import android.util.Log;
 
 /** @author addie */
-public @NonNullByDefault class EmptyEncounter extends Encounter {
+public class EmptyEncounter extends Encounter {
   @Override public List<Creature> creatures() {
     Log.w("LCS", "Got empty encounter creatures", new Exception());
     return encounter;

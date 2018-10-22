@@ -19,9 +19,9 @@ import lcs.android.politics.Politics;
 import lcs.android.util.Color;
 import lcs.android.util.Curses;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-public @NonNullByDefault class Survey extends ArrayList<Creature> implements DailyActivity {
+public class Survey extends ArrayList<Creature> implements DailyActivity {
   @Override public void daily() {
     for (final Creature c : this) {
       ui().text(c.toString() + " surfs the Net for recent opinion polls.").add();

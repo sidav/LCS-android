@@ -5,9 +5,9 @@ import lcs.android.basemode.iface.Location;
 import lcs.android.game.Game;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-@Xml.Name(name = "BUSINESS_BARANDGRILL") public @NonNullByDefault class BarAndGrill extends
+@Xml.Name(name = "BUSINESS_BARANDGRILL") public class BarAndGrill extends
     AbstractSiteType {
   @Override public boolean canBuyGuns() {
     return true;

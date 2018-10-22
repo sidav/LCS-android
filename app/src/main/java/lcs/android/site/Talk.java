@@ -31,11 +31,11 @@ import lcs.android.site.type.ArmsDealer;
 import lcs.android.util.Color;
 import lcs.android.util.Filter;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-@NonNullByDefault class Talk {
-  @Nullable private static Creature last = null;
+class Talk {
+  private static Creature last = null;
 
   static boolean talk(final Creature a, final Creature t) {
     // BLUFFING

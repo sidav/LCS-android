@@ -16,9 +16,9 @@ import lcs.android.politics.Alignment;
 import lcs.android.politics.Issue;
 import lcs.android.util.Color;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-public @NonNullByDefault class Recruit implements Serializable {
+public class Recruit implements Serializable {
   public Recruit(final Creature recruit, final Creature recruiter) {
     this.recruit = recruit;
     this.recruiter = recruiter;

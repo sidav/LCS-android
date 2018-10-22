@@ -9,13 +9,13 @@ import lcs.android.game.Game;
 import lcs.android.util.Xml;
 import lcs.android.util.Xml.Configurable;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 import android.util.Log;
 
 /** An ideal instance of the various armors found in-game */
-public @NonNullByDefault class ArmorType extends AbstractItemType {
+public class ArmorType extends AbstractItemType {
   static class Builder extends AbstractItemTypeBuilder<ArmorType> {
     private enum Children {
       ARMOR,
@@ -67,7 +67,7 @@ public @NonNullByDefault class ArmorType extends AbstractItemType {
 
     private boolean surpriseMask;
 
-    @Nullable private Children current = null;
+    private Children current = null;
 
     @Override public ArmorType build() {
       return new ArmorType(this);

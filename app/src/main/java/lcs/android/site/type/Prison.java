@@ -9,16 +9,16 @@ import lcs.android.politics.Issue;
 import lcs.android.site.map.SpecialBlocks;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-@Xml.Name(name = "GOVERNMENT_PRISON") public @NonNullByDefault class Prison extends
+@Xml.Name(name = "GOVERNMENT_PRISON") public class Prison extends
     AbstractSiteType {
   @Override public String ccsSiteName() {
     return "Ace Ghetto Pool Hall.";
   }
 
-  @Override @Nullable public SpecialBlocks firstSpecial() {
+  @Override public SpecialBlocks firstSpecial() {
     return SpecialBlocks.PRISON_CONTROL;
   }
 

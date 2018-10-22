@@ -11,9 +11,9 @@ import lcs.android.site.creation.SiteMap;
 import lcs.android.site.type.AbstractSiteType.UniqueNamedSite;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-@Xml.Name(name = "BUSINESS_CRACKHOUSE") public @NonNullByDefault class CrackHouse extends
+@Xml.Name(name = "BUSINESS_CRACKHOUSE") public class CrackHouse extends
     UniqueNamedSite implements IInvestable {
   @Override public String alarmResponseString() {
     return ": GANG MEMBERS RESPONDING";

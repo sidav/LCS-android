@@ -4,11 +4,11 @@ import lcs.android.creature.health.Wound;
 import lcs.android.items.WeaponType;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 /** An attack may contain details of a critical hit, which may cause extra damage or sever limbs. */
-@NonNullByDefault class Critical implements Xml.Configurable {
+class Critical implements Xml.Configurable {
   /** percentage chance of a critical, if the number of {@link #hitsRequired} is met */
   protected int chance = 0;
 
@@ -23,7 +23,7 @@ import org.eclipse.jdt.annotation.Nullable;
 
   private boolean randomDamageDefined = false;
 
-  @Nullable private Wound severType = null;
+  private Wound severType = null;
 
   /** if fixed damage is defined in the critical, return that; otherwise return the old value
    * @param old the value of a non-critical attack
@@ -47,7 +47,7 @@ import org.eclipse.jdt.annotation.Nullable;
 
   /** if sever damage is defined in the critical, return that; otherwise return an emtpy maybe.
    * @return critical sever damage if defined. */
-  @Nullable public Wound severType() {
+  public Wound severType() {
     return severType;
   }
 

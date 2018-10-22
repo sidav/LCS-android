@@ -7,10 +7,10 @@ import java.io.Serializable;
 import lcs.android.game.Game;
 import lcs.android.util.HashCodeBuilder;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-public @NonNullByDefault class LcsDate implements Comparable<LcsDate>, Serializable {
+public class LcsDate implements Comparable<LcsDate>, Serializable {
   LcsDate(final int day, final int month, final int year) {
     this.day = day;
     this.month = month;
@@ -52,7 +52,7 @@ public @NonNullByDefault class LcsDate implements Comparable<LcsDate>, Serializa
     return str.toString();
   }
 
-  @Override public int compareTo(final @Nullable LcsDate another) {
+  @Override public int compareTo(final LcsDate another) {
     assert another != null;
     if (year != another.year)
       return year - another.year;
@@ -78,7 +78,7 @@ public @NonNullByDefault class LcsDate implements Comparable<LcsDate>, Serializa
     return daysInMonth(month, year);
   }
 
-  @Override public boolean equals(final @Nullable Object o) {
+  @Override public boolean equals(final Object o) {
     if (o == this)
       return true;
     if (!(o instanceof LcsDate))

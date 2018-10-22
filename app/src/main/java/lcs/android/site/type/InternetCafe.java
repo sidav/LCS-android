@@ -7,16 +7,16 @@ import lcs.android.game.LcsRandom;
 import lcs.android.site.map.SpecialBlocks;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-@Xml.Name(name = "BUSINESS_INTERNETCAFE") public @NonNullByDefault class InternetCafe extends
+@Xml.Name(name = "BUSINESS_INTERNETCAFE") public class InternetCafe extends
     AbstractSiteType {
   @Override public void allocateMap(final LcsRandom SITERNG) {
     AbstractSiteType.type(JuiceBar.class).allocateMap(SITERNG);
   }
 
-  @Override @Nullable public SpecialBlocks commonSpecial() {
+  @Override public SpecialBlocks commonSpecial() {
     return SpecialBlocks.CAFE_COMPUTER;
   }
 

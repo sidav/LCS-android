@@ -36,14 +36,14 @@ import lcs.android.util.Getter;
 import lcs.android.util.Xml;
 import lcs.android.util.Xml.Configurable;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 import android.util.Log;
 
 /** A specific type of Creature which we might meet.
  * @author addie */
-public @NonNullByDefault class CreatureType implements Configurable, Serializable {
+public class CreatureType implements Configurable, Serializable {
   private enum Age {
     CHILD(7, 4),
     COLLEGE(18, 6),
@@ -390,7 +390,7 @@ public @NonNullByDefault class CreatureType implements Configurable, Serializabl
 
   private boolean ccs;
 
-  @Nullable private Skill coreSkill = null;
+  private Skill coreSkill = null;
 
   private Gender gender = Gender.MALE;
 
@@ -428,7 +428,7 @@ public @NonNullByDefault class CreatureType implements Configurable, Serializabl
 
   private Activity teaches = Activity.TEACH_POLITICS;
 
-  @Nullable private Uniform uniform;
+  private Uniform uniform;
 
   private final List<WeaponAssigner> weapontypes = new ArrayList<WeaponAssigner>();
 
@@ -442,7 +442,7 @@ public @NonNullByDefault class CreatureType implements Configurable, Serializabl
 
   /** Any particular skill highly-associated with the job, for when influencing public opinion.
    * @return A skill, may be null. */
-  @Nullable public Skill coreSkill() {
+  public Skill coreSkill() {
     return coreSkill;
   }
 
@@ -695,7 +695,7 @@ public @NonNullByDefault class CreatureType implements Configurable, Serializabl
     return uniform != null;
   }
 
-  @Nullable private Uniform uniform() {
+  private Uniform uniform() {
     return uniform;
   }
 
@@ -712,7 +712,7 @@ public @NonNullByDefault class CreatureType implements Configurable, Serializabl
     }
   }
 
-  private boolean verifyworklocation(@Nullable final Location location) {
+  private boolean verifyworklocation(final Location location) {
     if (location == null) {
       return false;
     }

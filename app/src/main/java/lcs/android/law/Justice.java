@@ -26,13 +26,13 @@ import lcs.android.site.type.Prison;
 import lcs.android.site.type.Shelter;
 import lcs.android.util.Color;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 import android.util.Log;
 
 /** Methods related to creatures being in jail.
  * @author addie */
-public @NonNullByDefault class Justice {
+public class Justice {
   private static final int aceAttorneyCost = 5000;
 
   /** Do monthly update on Creatures in prison.

@@ -8,12 +8,12 @@ import java.util.Set;
 
 import jp.ac.hiroshimau.sci.math.Twister;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 /** Our random number generator, based on the Mersenne Twister algorithm. Adds a few methods to the
- * base random number @NonNullByDefault class (randFrom...) so that we can play with arrays and
+ * base random number class (randFrom...) so that we can play with arrays and
  * collections a bit more readily. */
-public final @NonNullByDefault class LcsRandom extends Twister {
+public final class LcsRandom extends Twister {
   /** Gets the probability of something which is unlikely. eg. chance(5) has a 1-in-five chance of
    * occurrence.
    * @param chance the chance
@@ -47,7 +47,7 @@ public final @NonNullByDefault class LcsRandom extends Twister {
    * base method which throws {@link IllegalArgumentException} if you ask for 0, to just return 0
    * instead. */
   @Override public int nextInt(final int n) {
-    /* nextInt(0) causes an IAE in Java's built-in Random @NonNullByDefault class, so we need to
+    /* nextInt(0) causes an IAE in Java's built-in Random class, so we need to
      * check for it. */
     return n <= 0 ? 0 : super.nextInt(n);
   }

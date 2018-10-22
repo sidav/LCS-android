@@ -19,9 +19,9 @@ import lcs.android.news.StoryType;
 import lcs.android.site.type.PoliceStation;
 import lcs.android.util.Filter;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-public @NonNullByDefault class Burials extends ArrayList<Creature> implements DailyActivity {
+public class Burials extends ArrayList<Creature> implements DailyActivity {
   @Override public void daily() {
     for (final Creature p : Filter.of(i.pool, Filter.ALL)) {
       if (isEmpty()) {

@@ -21,10 +21,10 @@ import lcs.android.politics.Issue;
 import lcs.android.site.type.CigarBar;
 import lcs.android.util.Color;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-public @NonNullByDefault class MapSpecials {
+public class MapSpecials {
   private static enum BouncerRejectReason {
     BLOODYCLOTHES,
     CCS,
@@ -206,7 +206,7 @@ public @NonNullByDefault class MapSpecials {
     i.currentEncounter().creatures().get(0).receptive(Receptive.HEARD);
   }
 
-  @Nullable public static Creature specialBouncerGreetSquad() {
+  public static Creature specialBouncerGreetSquad() {
     Creature sleeperBouncer = null;
     // add a bouncer if there isn't one in the first slot
     i.currentEncounter(new SiteEncounter());

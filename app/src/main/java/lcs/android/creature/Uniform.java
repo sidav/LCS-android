@@ -7,9 +7,9 @@ import java.util.Map.Entry;
 import lcs.android.game.Quality;
 import lcs.android.util.Xml.Configurable;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-public @NonNullByDefault class Uniform implements Configurable {
+public class Uniform implements Configurable {
   private final Map<String, Quality> quality = new HashMap<String, Quality>();
 
   @Override public String toString() {

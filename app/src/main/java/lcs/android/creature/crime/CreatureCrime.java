@@ -16,9 +16,9 @@ import lcs.android.util.Getter;
 import lcs.android.util.Setter;
 import lcs.android.util.SparseMap;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-public @NonNullByDefault class CreatureCrime implements Serializable {
+public class CreatureCrime implements Serializable {
   public CreatureCrime(final Creature creature) {
     c = creature;
   }

@@ -27,12 +27,12 @@ import lcs.android.util.Color;
 import lcs.android.util.Curses;
 import lcs.android.util.Filter;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
 import android.util.Log;
 
-@NonNullByDefault class Activate {
+class Activate {
   private Activate() {}
 
   private static final Activity[] CLASSES = { Activity.STUDY_DEBATING, Activity.STUDY_BUSINESS,
@@ -628,8 +628,8 @@ import android.util.Log;
       armortypei.add(a);
     }
     Collections.sort(armortypei, new Comparator<ArmorType>() {
-      @Override public int compare(final @Nullable ArmorType object1,
-          final @Nullable ArmorType object2) {
+      @Override public int compare(final ArmorType object1,
+          final ArmorType object2) {
         assert object1 != null;
         assert object2 != null;
         return object1.toString().compareTo(object2.toString());

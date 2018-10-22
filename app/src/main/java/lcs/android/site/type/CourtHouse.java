@@ -8,16 +8,16 @@ import lcs.android.politics.Issue;
 import lcs.android.site.map.SpecialBlocks;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-@Xml.Name(name = "GOVERNMENT_COURTHOUSE") public @NonNullByDefault class CourtHouse extends
+@Xml.Name(name = "GOVERNMENT_COURTHOUSE") public class CourtHouse extends
     AbstractSiteType {
   @Override public String ccsSiteName() {
     return "Abortion Clinic.";
   }
 
-  @Override @Nullable public SpecialBlocks firstSpecial() {
+  @Override public SpecialBlocks firstSpecial() {
     return SpecialBlocks.COURTHOUSE_LOCKUP;
   }
 
@@ -62,7 +62,7 @@ import org.eclipse.jdt.annotation.Nullable;
     }
   }
 
-  @Override @Nullable public SpecialBlocks secondSpecial() {
+  @Override public SpecialBlocks secondSpecial() {
     return SpecialBlocks.COURTHOUSE_JURYROOM;
   }
 

@@ -6,11 +6,11 @@ import java.io.Serializable;
 
 import lcs.android.game.Game;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 /** Records modifications to sitechanges due to eg. debris.
  * @author addie */
-public @NonNullByDefault class MapChangeRecord implements Serializable {
+public class MapChangeRecord implements Serializable {
   public MapChangeRecord(final int x, final int y, final int z, final TileSpecial flag) {
     this.x = x;
     this.y = y;

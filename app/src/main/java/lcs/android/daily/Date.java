@@ -29,9 +29,9 @@ import lcs.android.site.type.AbstractSiteType;
 import lcs.android.site.type.PoliceStation;
 import lcs.android.util.Color;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-public @NonNullByDefault class Date implements Serializable {
+public class Date implements Serializable {
   private enum DateResult {
     ARRESTED,
     BREAKUP,

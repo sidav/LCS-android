@@ -19,9 +19,9 @@ import lcs.android.items.ArmorType;
 import lcs.android.items.Loot;
 import lcs.android.site.Squad;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-public @NonNullByDefault class MakeArmor extends ArrayList<Creature> implements DailyActivity {
+public class MakeArmor extends ArrayList<Creature> implements DailyActivity {
   @Override public void daily() {
     for (final Creature c : this) {
       makearmor(c);

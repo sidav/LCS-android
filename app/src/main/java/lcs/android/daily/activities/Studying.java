@@ -12,9 +12,9 @@ import lcs.android.creature.skill.Skill;
 import lcs.android.game.Game;
 import lcs.android.game.Ledger;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-public @NonNullByDefault class Studying extends ArrayList<Creature> implements DailyActivity {
+public class Studying extends ArrayList<Creature> implements DailyActivity {
   @Override public void daily() {
     final List<Creature> students = this;
     for (final Creature s : students) {

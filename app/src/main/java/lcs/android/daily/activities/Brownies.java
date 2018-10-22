@@ -18,9 +18,9 @@ import lcs.android.news.StoryType;
 import lcs.android.politics.Alignment;
 import lcs.android.politics.Issue;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-public @NonNullByDefault class Brownies extends ArrayList<Creature> implements DailyActivity {
+public class Brownies extends ArrayList<Creature> implements DailyActivity {
   @Override public void daily() {
     for (final Creature s : this) {
       // Check for police search

@@ -11,9 +11,9 @@ import lcs.android.site.creation.SiteMap;
 import lcs.android.site.map.TileSpecial;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-@Xml.Name(name = "BUSINESS_LATTESTAND") public @NonNullByDefault class LatteStand extends
+@Xml.Name(name = "BUSINESS_LATTESTAND") public class LatteStand extends
     AbstractSiteType {
   @Override public void allocateMap(final LcsRandom SITERNG) {
     for (int x = SiteMap.MAPX / 2 - 4; x <= SiteMap.MAPX / 2 + 4; x++) {

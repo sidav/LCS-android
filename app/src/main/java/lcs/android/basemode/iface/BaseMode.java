@@ -26,9 +26,9 @@ import lcs.android.util.Curses;
 import lcs.android.util.Filter;
 import lcs.android.util.LcsRuntimeException;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-public @NonNullByDefault class BaseMode {
+public class BaseMode {
   private BaseMode() {}
 
   private static final String FLAG = "\n" + //

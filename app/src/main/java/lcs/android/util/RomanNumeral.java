@@ -1,8 +1,8 @@
 package lcs.android.util;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-public @NonNullByDefault class RomanNumeral {
+public class RomanNumeral {
   public RomanNumeral(final int number) {
     this.number = number;
   }

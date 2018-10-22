@@ -4,9 +4,9 @@ import lcs.android.activities.iface.Activity;
 import lcs.android.game.Game;
 import lcs.android.items.AbstractItemType;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-public @NonNullByDefault class ItemActivity extends AbstractActivity {
+public class ItemActivity extends AbstractActivity {
   /** Activity which targets in item (basically make armour). Immutable.
    * @param type
    * @param item */

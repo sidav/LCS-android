@@ -1,8 +1,8 @@
 package lcs.android.creature.health;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
-public @NonNullByDefault enum Animal {
+public enum Animal {
   ANIMAL {
     @Override public String partName(final BodyPart bp) {
       switch (bp) {

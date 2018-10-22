@@ -8,12 +8,12 @@ import lcs.android.game.Game;
 import lcs.android.util.IBuilder;
 import lcs.android.util.Xml;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 import android.util.Log;
 
 /** The ideal of an item of some type. */
-abstract public @NonNullByDefault class AbstractItemType implements Serializable {
+abstract public class AbstractItemType implements Serializable {
   static abstract class AbstractItemTypeBuilder<T> implements Xml.Configurable, IBuilder<T> {
     private int fencevalue;
 

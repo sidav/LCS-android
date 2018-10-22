@@ -7,15 +7,15 @@ import java.util.Set;
 
 import lcs.android.game.Game;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
-import org.eclipse.jdt.annotation.Nullable;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.Nullable;
 
-/** A wrapper of a Map @NonNullByDefault class, which throws exceptions if duplicates are added, or
+/** A wrapper of a Map class, which throws exceptions if duplicates are added, or
  * null values are retrieved.
  * @author addie
  * @param <K> Keys
  * @param <V> Values */
-public @NonNullByDefault class NoDupeNoEmptyMap<K, V> implements Map<K, V>, Serializable {
+public class NoDupeNoEmptyMap<K, V> implements Map<K, V>, Serializable {
   public NoDupeNoEmptyMap(final Map<K, V> delegate) {
     this.delegate = delegate;
   }
@@ -26,11 +26,11 @@ public @NonNullByDefault class NoDupeNoEmptyMap<K, V> implements Map<K, V>, Seri
     delegate.clear();
   }
 
-  @Override public boolean containsKey(final @Nullable Object key) {
+  @Override public boolean containsKey(final Object key) {
     return delegate.containsKey(key);
   }
 
-  @Override public boolean containsValue(final @Nullable Object value) {
+  @Override public boolean containsValue(final Object value) {
     return delegate.containsValue(value);
   }
 
@@ -38,7 +38,7 @@ public @NonNullByDefault class NoDupeNoEmptyMap<K, V> implements Map<K, V>, Seri
     return delegate.entrySet();
   }
 
-  @Override public V get(final @Nullable Object key) {
+  @Override public V get(final Object key) {
     final V rval = delegate.get(key);
     if (rval == null)
       throw new IllegalArgumentException("No object for key:" + key);
@@ -53,14 +53,14 @@ public @NonNullByDefault class NoDupeNoEmptyMap<K, V> implements Map<K, V>, Seri
     return delegate.keySet();
   }
 
-  @Override public @Nullable V put(final @Nullable K key, final @Nullable V value) {
+  @Override public V put(final K key, final V value) {
     final V rval = delegate.put(key, value);
     if (rval != null)
       throw new IllegalArgumentException("Duplicate object for:" + key);
     return rval;
   }
 
-  @Override public void putAll(final @Nullable Map<? extends K, ? extends V> map) {
+  @Override public void putAll(final Map<? extends K, ? extends V> map) {
     if (map == null)
       return;
     for (final Entry<? extends K, ? extends V> entry : map.entrySet()) {
@@ -68,7 +68,7 @@ public @NonNullByDefault class NoDupeNoEmptyMap<K, V> implements Map<K, V>, Seri
     }
   }
 
-  @Override public V remove(final @Nullable Object key) {
+  @Override public V remove(final Object key) {
     final V rval = delegate.remove(key);
     if (rval == null)
       throw new IllegalArgumentException("Can't remove:" + key);

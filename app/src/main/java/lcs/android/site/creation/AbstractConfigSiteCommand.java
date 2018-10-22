@@ -3,11 +3,11 @@ package lcs.android.site.creation;
 import lcs.android.game.Game;
 import lcs.android.util.Xml.Configurable;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 import android.util.Log;
 
-abstract @NonNullByDefault class AbstractConfigSiteCommand implements Configurable {
+abstract class AbstractConfigSiteCommand implements Configurable {
   @Override public String toString() {
     return "ConfigSiteCommand:";
   }

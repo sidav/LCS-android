@@ -5,12 +5,12 @@ import static lcs.android.util.Curses.*;
 import lcs.android.basemode.iface.Location;
 import lcs.android.game.Game;
 
-import org.eclipse.jdt.annotation.NonNullByDefault;
+// import org.eclipse.jdt.annotation.NonNullByDefault;
 
 import android.util.Log;
 
 /** Something the LCS can drive around in. */
-public @NonNullByDefault class Vehicle extends AbstractItem<VehicleType> {
+public class Vehicle extends AbstractItem<VehicleType> {
   public Vehicle(final String string) {
     this(Game.type.vehicle.get(vehicled(string)));
   }
